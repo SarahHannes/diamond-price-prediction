@@ -11,7 +11,14 @@ Predict diamond price using simple feedforward neural network. Data is obtained 
 ### Model Architecture
 
 - Input layer + 5 Dense hidden layers + 1 Dense output layer
-- Trained for 100 epochs
-- Last validation mean absolute error is 265.9
+- Trained for 100 epochs with default batch size of 32
+- Achieved least validation mean absolute error on epoch 98 (MAE: 252.71930)
+
+#### Model architecture summary
 <img src="plot/model.png" width="340">
+
+#### Mean absolute error during training
 <img src="plot/mean_absolute_error.jpg" width="800">
+
+#### Predictions against test data
+<img src="plot/test_data_predictions.jpg" width="400">
