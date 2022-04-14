@@ -13076,7 +13076,7 @@ div#notebook {
 
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-python"><pre><span></span><span class="c1"># Module to get variable name as str</span>
@@ -13097,17 +13097,11 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Collecting varname
-  Downloading varname-0.8.3-py3-none-any.whl (21 kB)
-Collecting asttokens&lt;3.0.0,&gt;=2.0.0
-  Downloading asttokens-2.0.5-py2.py3-none-any.whl (20 kB)
-Collecting executing&lt;0.9.0,&gt;=0.8.3
-  Downloading executing-0.8.3-py2.py3-none-any.whl (16 kB)
-Collecting pure_eval&lt;1.0.0
-  Downloading pure_eval-0.2.2-py3-none-any.whl (11 kB)
+<pre>Requirement already satisfied: varname in /usr/local/lib/python3.7/dist-packages (0.8.3)
+Requirement already satisfied: pure_eval&lt;1.0.0 in /usr/local/lib/python3.7/dist-packages (from varname) (0.2.2)
+Requirement already satisfied: executing&lt;0.9.0,&gt;=0.8.3 in /usr/local/lib/python3.7/dist-packages (from varname) (0.8.3)
+Requirement already satisfied: asttokens&lt;3.0.0,&gt;=2.0.0 in /usr/local/lib/python3.7/dist-packages (from varname) (2.0.5)
 Requirement already satisfied: six in /usr/local/lib/python3.7/dist-packages (from asttokens&lt;3.0.0,&gt;=2.0.0-&gt;varname) (1.15.0)
-Installing collected packages: pure-eval, executing, asttokens, varname
-Successfully installed asttokens-2.0.5 executing-0.8.3 pure-eval-0.2.2 varname-0.8.3
 </pre>
 </div>
 </div>
@@ -13118,7 +13112,7 @@ Successfully installed asttokens-2.0.5 executing-0.8.3 pure-eval-0.2.2 varname-0
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-python"><pre><span></span><span class="c1"># Install kaggle to download dataset</span>
@@ -13140,13 +13134,13 @@ Successfully installed asttokens-2.0.5 executing-0.8.3 pure-eval-0.2.2 varname-0
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Requirement already satisfied: kaggle in /usr/local/lib/python3.7/dist-packages (1.5.12)
-Requirement already satisfied: certifi in /usr/local/lib/python3.7/dist-packages (from kaggle) (2021.10.8)
-Requirement already satisfied: requests in /usr/local/lib/python3.7/dist-packages (from kaggle) (2.23.0)
-Requirement already satisfied: six&gt;=1.10 in /usr/local/lib/python3.7/dist-packages (from kaggle) (1.15.0)
-Requirement already satisfied: python-slugify in /usr/local/lib/python3.7/dist-packages (from kaggle) (6.1.1)
 Requirement already satisfied: urllib3 in /usr/local/lib/python3.7/dist-packages (from kaggle) (1.24.3)
+Requirement already satisfied: python-slugify in /usr/local/lib/python3.7/dist-packages (from kaggle) (6.1.1)
+Requirement already satisfied: six&gt;=1.10 in /usr/local/lib/python3.7/dist-packages (from kaggle) (1.15.0)
 Requirement already satisfied: python-dateutil in /usr/local/lib/python3.7/dist-packages (from kaggle) (2.8.2)
-Requirement already satisfied: tqdm in /usr/local/lib/python3.7/dist-packages (from kaggle) (4.63.0)
+Requirement already satisfied: requests in /usr/local/lib/python3.7/dist-packages (from kaggle) (2.23.0)
+Requirement already satisfied: certifi in /usr/local/lib/python3.7/dist-packages (from kaggle) (2021.10.8)
+Requirement already satisfied: tqdm in /usr/local/lib/python3.7/dist-packages (from kaggle) (4.64.0)
 Requirement already satisfied: text-unidecode&gt;=1.3 in /usr/local/lib/python3.7/dist-packages (from python-slugify-&gt;kaggle) (1.3)
 Requirement already satisfied: chardet&lt;4,&gt;=3.0.2 in /usr/local/lib/python3.7/dist-packages (from requests-&gt;kaggle) (3.0.4)
 Requirement already satisfied: idna&lt;3,&gt;=2.5 in /usr/local/lib/python3.7/dist-packages (from requests-&gt;kaggle) (2.10)
@@ -13160,13 +13154,13 @@ Requirement already satisfied: idna&lt;3,&gt;=2.5 in /usr/local/lib/python3.7/di
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[45]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-python"><pre><span></span><span class="c1"># Load the TensorBoard notebook extension</span>
-<span class="o">%</span><span class="n">load_ext</span> <span class="n">tensorboard</span>
+<span class="c1"># %load_ext tensorboard</span>
 <span class="c1"># Reload TensorBoard</span>
-<span class="c1"># %reload_ext tensorboard</span>
+<span class="o">%</span><span class="n">reload_ext</span> <span class="n">tensorboard</span>
 </pre></div>
 
     </div>
@@ -13176,7 +13170,7 @@ Requirement already satisfied: idna&lt;3,&gt;=2.5 in /usr/local/lib/python3.7/di
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-python"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span> <span class="k">as</span> <span class="n">dt</span>
@@ -13209,7 +13203,7 @@ Requirement already satisfied: idna&lt;3,&gt;=2.5 in /usr/local/lib/python3.7/di
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-python"><pre><span></span><span class="c1"># Mount Google Drive</span>
@@ -13243,7 +13237,7 @@ Requirement already satisfied: idna&lt;3,&gt;=2.5 in /usr/local/lib/python3.7/di
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-python"><pre><span></span><span class="c1"># Create a new directory in root</span>
@@ -13273,7 +13267,7 @@ Requirement already satisfied: idna&lt;3,&gt;=2.5 in /usr/local/lib/python3.7/di
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Downloading diamonds.zip to /content
   0% 0.00/733k [00:00&lt;?, ?B/s]
-100% 733k/733k [00:00&lt;00:00, 99.9MB/s]
+100% 733k/733k [00:00&lt;00:00, 57.2MB/s]
 </pre>
 </div>
 </div>
@@ -13284,7 +13278,7 @@ Requirement already satisfied: idna&lt;3,&gt;=2.5 in /usr/local/lib/python3.7/di
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-python"><pre><span></span><span class="c1"># Extract dataset from zip to current session</span>
@@ -13300,7 +13294,7 @@ Requirement already satisfied: idna&lt;3,&gt;=2.5 in /usr/local/lib/python3.7/di
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-python"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;/content/diamonds.csv&#39;</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
@@ -13313,7 +13307,7 @@ Requirement already satisfied: idna&lt;3,&gt;=2.5 in /usr/local/lib/python3.7/di
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-python"><pre><span></span><span class="n">df</span>
@@ -13329,13 +13323,13 @@ Requirement already satisfied: idna&lt;3,&gt;=2.5 in /usr/local/lib/python3.7/di
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[13]:</div>
+    <div class="prompt output_prompt">Out[9]:</div>
 
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 
-  <div id="df-d4c25ead-cee9-4d27-b805-33ed1ad87648">
+  <div id="df-89bab547-3133-459f-89f3-f043e7a64a2f">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -13515,7 +13509,7 @@ Requirement already satisfied: idna&lt;3,&gt;=2.5 in /usr/local/lib/python3.7/di
 </table>
 <p>53940 rows × 10 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-d4c25ead-cee9-4d27-b805-33ed1ad87648')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-89bab547-3133-459f-89f3-f043e7a64a2f')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -13566,12 +13560,12 @@ Requirement already satisfied: idna&lt;3,&gt;=2.5 in /usr/local/lib/python3.7/di
 
       <script>
         const buttonEl =
-          document.querySelector('#df-d4c25ead-cee9-4d27-b805-33ed1ad87648 button.colab-df-convert');
+          document.querySelector('#df-89bab547-3133-459f-89f3-f043e7a64a2f button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-d4c25ead-cee9-4d27-b805-33ed1ad87648');
+          const element = document.querySelector('#df-89bab547-3133-459f-89f3-f043e7a64a2f');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -13595,17 +13589,6 @@ Requirement already satisfied: idna&lt;3,&gt;=2.5 in /usr/local/lib/python3.7/di
 
 </div>
 
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Warning: total number of rows (53940) exceeds max_rows (20000). Limiting to first (20000) rows.
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -13619,7 +13602,7 @@ Requirement already satisfied: idna&lt;3,&gt;=2.5 in /usr/local/lib/python3.7/di
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-python"><pre><span></span><span class="c1"># Check for NAs and Nulls</span>
@@ -13673,18 +13656,17 @@ dtype: int64
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[46]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-python"><pre><span></span><span class="c1"># Transform all categorical columns</span>
 
-<span class="n">transformer</span> <span class="o">=</span> <span class="n">ColumnTransformer</span><span class="p">(</span>
-    <span class="n">transformers</span><span class="o">=</span><span class="p">[(</span><span class="s1">&#39;ord_cut&#39;</span><span class="p">,</span> <span class="n">OrdinalEncoder</span><span class="p">(),</span> <span class="p">[</span><span class="s1">&#39;cut&#39;</span><span class="p">]),</span>
-                  <span class="p">(</span><span class="s1">&#39;ord_color&#39;</span><span class="p">,</span> <span class="n">OrdinalEncoder</span><span class="p">(),</span> <span class="p">[</span><span class="s1">&#39;color&#39;</span><span class="p">]),</span>
-                  <span class="p">(</span><span class="s1">&#39;ord_clarity&#39;</span><span class="p">,</span> <span class="n">OrdinalEncoder</span><span class="p">(),</span> <span class="p">[</span><span class="s1">&#39;clarity&#39;</span><span class="p">])],</span>
-                  <span class="n">remainder</span><span class="o">=</span><span class="s2">&quot;passthrough&quot;</span><span class="p">)</span>
+<span class="n">cut_categories</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Fair&#39;</span><span class="p">,</span> <span class="s1">&#39;Good&#39;</span><span class="p">,</span> <span class="s1">&#39;Very Good&#39;</span><span class="p">,</span> <span class="s1">&#39;Premium&#39;</span><span class="p">,</span> <span class="s1">&#39;Ideal&#39;</span><span class="p">]</span>
+<span class="n">color_categories</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;J&#39;</span><span class="p">,</span> <span class="s1">&#39;I&#39;</span><span class="p">,</span> <span class="s1">&#39;H&#39;</span><span class="p">,</span> <span class="s1">&#39;G&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">]</span>
+<span class="n">clarity_categories</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;I1&#39;</span><span class="p">,</span> <span class="s1">&#39;SI2&#39;</span><span class="p">,</span> <span class="s1">&#39;SI1&#39;</span><span class="p">,</span> <span class="s1">&#39;VS2&#39;</span><span class="p">,</span> <span class="s1">&#39;VS1&#39;</span><span class="p">,</span> <span class="s1">&#39;VVS2&#39;</span><span class="p">,</span> <span class="s1">&#39;VVS1&#39;</span><span class="p">,</span> <span class="s1">&#39;IF&#39;</span><span class="p">]</span>
 
-<span class="n">transformed</span> <span class="o">=</span> <span class="n">transformer</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<span class="n">encoder</span> <span class="o">=</span> <span class="n">OrdinalEncoder</span><span class="p">(</span><span class="n">categories</span> <span class="o">=</span> <span class="p">[</span><span class="n">cut_categories</span><span class="p">,</span> <span class="n">color_categories</span><span class="p">,</span> <span class="n">clarity_categories</span><span class="p">])</span>
+<span class="n">transformed</span> <span class="o">=</span> <span class="n">encoder</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">df</span><span class="p">[[</span><span class="s1">&#39;cut&#39;</span><span class="p">,</span> <span class="s1">&#39;color&#39;</span><span class="p">,</span> <span class="s1">&#39;clarity&#39;</span><span class="p">]])</span>
 </pre></div>
 
     </div>
@@ -13694,44 +13676,11 @@ dtype: int64
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[49]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="n">transformed</span><span class="o">.</span><span class="n">shape</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[49]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>(53940, 10)</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[54]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="c1"># Convert numpy array into dataframe and reset into the original column names</span>
-<span class="n">df2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">transformed</span><span class="p">)</span><span class="o">.</span><span class="n">set_axis</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<div class=" highlight hl-python"><pre><span></span><span class="n">df2</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;cut&#39;</span><span class="p">,</span> <span class="s1">&#39;color&#39;</span><span class="p">,</span> <span class="s1">&#39;clarity&#39;</span><span class="p">])</span>
+<span class="n">transformed_features</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">transformed</span><span class="p">)</span><span class="o">.</span><span class="n">set_axis</span><span class="p">([</span><span class="s1">&#39;cut&#39;</span><span class="p">,</span> <span class="s1">&#39;color&#39;</span><span class="p">,</span> <span class="s1">&#39;clarity&#39;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13741,7 +13690,7 @@ dtype: int64
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[55]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-python"><pre><span></span><span class="n">df2</span>
@@ -13757,13 +13706,13 @@ dtype: int64
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[55]:</div>
+    <div class="prompt output_prompt">Out[22]:</div>
 
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 
-  <div id="df-35b42cd8-4685-4cef-827f-97a7482fd27b">
+  <div id="df-48c54e36-7174-4cf9-8451-6342b9dd06f8">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -13784,9 +13733,6 @@ dtype: int64
     <tr style="text-align: right;">
       <th></th>
       <th>carat</th>
-      <th>cut</th>
-      <th>color</th>
-      <th>clarity</th>
       <th>depth</th>
       <th>table</th>
       <th>price</th>
@@ -13797,66 +13743,51 @@ dtype: int64
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
-      <td>2.0</td>
-      <td>1.0</td>
-      <td>3.0</td>
+      <th>1</th>
       <td>0.23</td>
       <td>61.5</td>
       <td>55.0</td>
-      <td>326.0</td>
+      <td>326</td>
       <td>3.95</td>
       <td>3.98</td>
       <td>2.43</td>
     </tr>
     <tr>
-      <th>1</th>
-      <td>3.0</td>
-      <td>1.0</td>
-      <td>2.0</td>
+      <th>2</th>
       <td>0.21</td>
       <td>59.8</td>
       <td>61.0</td>
-      <td>326.0</td>
+      <td>326</td>
       <td>3.89</td>
       <td>3.84</td>
       <td>2.31</td>
     </tr>
     <tr>
-      <th>2</th>
-      <td>1.0</td>
-      <td>1.0</td>
-      <td>4.0</td>
+      <th>3</th>
       <td>0.23</td>
       <td>56.9</td>
       <td>65.0</td>
-      <td>327.0</td>
+      <td>327</td>
       <td>4.05</td>
       <td>4.07</td>
       <td>2.31</td>
     </tr>
     <tr>
-      <th>3</th>
-      <td>3.0</td>
-      <td>5.0</td>
-      <td>5.0</td>
+      <th>4</th>
       <td>0.29</td>
       <td>62.4</td>
       <td>58.0</td>
-      <td>334.0</td>
+      <td>334</td>
       <td>4.20</td>
       <td>4.23</td>
       <td>2.63</td>
     </tr>
     <tr>
-      <th>4</th>
-      <td>1.0</td>
-      <td>6.0</td>
-      <td>3.0</td>
+      <th>5</th>
       <td>0.31</td>
       <td>63.3</td>
       <td>58.0</td>
-      <td>335.0</td>
+      <td>335</td>
       <td>4.34</td>
       <td>4.35</td>
       <td>2.75</td>
@@ -13870,80 +13801,62 @@ dtype: int64
       <td>...</td>
       <td>...</td>
       <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
     </tr>
     <tr>
-      <th>53935</th>
-      <td>2.0</td>
-      <td>0.0</td>
-      <td>2.0</td>
+      <th>53936</th>
       <td>0.72</td>
       <td>60.8</td>
       <td>57.0</td>
-      <td>2757.0</td>
+      <td>2757</td>
       <td>5.75</td>
       <td>5.76</td>
       <td>3.50</td>
     </tr>
     <tr>
-      <th>53936</th>
-      <td>1.0</td>
-      <td>0.0</td>
-      <td>2.0</td>
+      <th>53937</th>
       <td>0.72</td>
       <td>63.1</td>
       <td>55.0</td>
-      <td>2757.0</td>
+      <td>2757</td>
       <td>5.69</td>
       <td>5.75</td>
       <td>3.61</td>
     </tr>
     <tr>
-      <th>53937</th>
-      <td>4.0</td>
-      <td>0.0</td>
-      <td>2.0</td>
+      <th>53938</th>
       <td>0.70</td>
       <td>62.8</td>
       <td>60.0</td>
-      <td>2757.0</td>
+      <td>2757</td>
       <td>5.66</td>
       <td>5.68</td>
       <td>3.56</td>
     </tr>
     <tr>
-      <th>53938</th>
-      <td>3.0</td>
-      <td>4.0</td>
-      <td>3.0</td>
+      <th>53939</th>
       <td>0.86</td>
       <td>61.0</td>
       <td>58.0</td>
-      <td>2757.0</td>
+      <td>2757</td>
       <td>6.15</td>
       <td>6.12</td>
       <td>3.74</td>
     </tr>
     <tr>
-      <th>53939</th>
-      <td>2.0</td>
-      <td>0.0</td>
-      <td>3.0</td>
+      <th>53940</th>
       <td>0.75</td>
       <td>62.2</td>
       <td>55.0</td>
-      <td>2757.0</td>
+      <td>2757</td>
       <td>5.83</td>
       <td>5.87</td>
       <td>3.64</td>
     </tr>
   </tbody>
 </table>
-<p>53940 rows × 10 columns</p>
+<p>53940 rows × 7 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-35b42cd8-4685-4cef-827f-97a7482fd27b')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-48c54e36-7174-4cf9-8451-6342b9dd06f8')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -13994,12 +13907,12 @@ dtype: int64
 
       <script>
         const buttonEl =
-          document.querySelector('#df-35b42cd8-4685-4cef-827f-97a7482fd27b button.colab-df-convert');
+          document.querySelector('#df-48c54e36-7174-4cf9-8451-6342b9dd06f8 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-35b42cd8-4685-4cef-827f-97a7482fd27b');
+          const element = document.querySelector('#df-48c54e36-7174-4cf9-8451-6342b9dd06f8');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -14023,15 +13936,208 @@ dtype: int64
 
 </div>
 
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">transformed_features</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
 <div class="output_area">
 
-    <div class="prompt"></div>
+    <div class="prompt output_prompt">Out[31]:</div>
 
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Warning: total number of rows (53940) exceeds max_rows (20000). Limiting to first (20000) rows.
-</pre>
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+
+  <div id="df-76e0785c-89dd-4c59-a60a-26f59bfa0d31">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>cut</th>
+      <th>color</th>
+      <th>clarity</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>4.0</td>
+      <td>5.0</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>3.0</td>
+      <td>5.0</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1.0</td>
+      <td>5.0</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>3.0</td>
+      <td>1.0</td>
+      <td>3.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>53935</th>
+      <td>4.0</td>
+      <td>6.0</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>53936</th>
+      <td>1.0</td>
+      <td>6.0</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>53937</th>
+      <td>2.0</td>
+      <td>6.0</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>53938</th>
+      <td>3.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>53939</th>
+      <td>4.0</td>
+      <td>6.0</td>
+      <td>1.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>53940 rows × 3 columns</p>
 </div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-76e0785c-89dd-4c59-a60a-26f59bfa0d31')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+        
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+      
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-76e0785c-89dd-4c59-a60a-26f59bfa0d31 button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-76e0785c-89dd-4c59-a60a-26f59bfa0d31');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+  
+</div>
+
 </div>
 
 </div>
@@ -14040,15 +14146,10 @@ dtype: int64
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[58]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="c1"># Split into feature and label</span>
-<span class="n">features</span> <span class="o">=</span> <span class="n">df2</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;price&#39;</span><span class="p">])</span>
-<span class="n">label</span> <span class="o">=</span> <span class="n">df2</span><span class="p">[[</span><span class="s1">&#39;price&#39;</span><span class="p">]]</span>
-
-<span class="c1"># Train/ test split</span>
-<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">features</span><span class="p">,</span> <span class="n">label</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<div class=" highlight hl-python"><pre><span></span><span class="n">transformed_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df2</span><span class="p">,</span> <span class="n">transformed_features</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="n">df2</span><span class="o">.</span><span class="n">index</span><span class="p">)],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14058,10 +14159,337 @@ dtype: int64
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[59]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">transformed_df</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[33]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+
+  <div id="df-f4ac7046-79f9-4401-b9bb-ddbd40c3f163">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>carat</th>
+      <th>depth</th>
+      <th>table</th>
+      <th>price</th>
+      <th>x</th>
+      <th>y</th>
+      <th>z</th>
+      <th>cut</th>
+      <th>color</th>
+      <th>clarity</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>0.23</td>
+      <td>61.5</td>
+      <td>55.0</td>
+      <td>326</td>
+      <td>3.95</td>
+      <td>3.98</td>
+      <td>2.43</td>
+      <td>4.0</td>
+      <td>5.0</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.21</td>
+      <td>59.8</td>
+      <td>61.0</td>
+      <td>326</td>
+      <td>3.89</td>
+      <td>3.84</td>
+      <td>2.31</td>
+      <td>3.0</td>
+      <td>5.0</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.23</td>
+      <td>56.9</td>
+      <td>65.0</td>
+      <td>327</td>
+      <td>4.05</td>
+      <td>4.07</td>
+      <td>2.31</td>
+      <td>1.0</td>
+      <td>5.0</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.29</td>
+      <td>62.4</td>
+      <td>58.0</td>
+      <td>334</td>
+      <td>4.20</td>
+      <td>4.23</td>
+      <td>2.63</td>
+      <td>3.0</td>
+      <td>1.0</td>
+      <td>3.0</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>0.31</td>
+      <td>63.3</td>
+      <td>58.0</td>
+      <td>335</td>
+      <td>4.34</td>
+      <td>4.35</td>
+      <td>2.75</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>53936</th>
+      <td>0.72</td>
+      <td>60.8</td>
+      <td>57.0</td>
+      <td>2757</td>
+      <td>5.75</td>
+      <td>5.76</td>
+      <td>3.50</td>
+      <td>4.0</td>
+      <td>6.0</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>53937</th>
+      <td>0.72</td>
+      <td>63.1</td>
+      <td>55.0</td>
+      <td>2757</td>
+      <td>5.69</td>
+      <td>5.75</td>
+      <td>3.61</td>
+      <td>1.0</td>
+      <td>6.0</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>53938</th>
+      <td>0.70</td>
+      <td>62.8</td>
+      <td>60.0</td>
+      <td>2757</td>
+      <td>5.66</td>
+      <td>5.68</td>
+      <td>3.56</td>
+      <td>2.0</td>
+      <td>6.0</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>53939</th>
+      <td>0.86</td>
+      <td>61.0</td>
+      <td>58.0</td>
+      <td>2757</td>
+      <td>6.15</td>
+      <td>6.12</td>
+      <td>3.74</td>
+      <td>3.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>53940</th>
+      <td>0.75</td>
+      <td>62.2</td>
+      <td>55.0</td>
+      <td>2757</td>
+      <td>5.83</td>
+      <td>5.87</td>
+      <td>3.64</td>
+      <td>4.0</td>
+      <td>6.0</td>
+      <td>1.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>53940 rows × 10 columns</p>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-f4ac7046-79f9-4401-b9bb-ddbd40c3f163')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+        
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+      
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-f4ac7046-79f9-4401-b9bb-ddbd40c3f163 button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-f4ac7046-79f9-4401-b9bb-ddbd40c3f163');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+  
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="c1"># Split into feature and label</span>
+<span class="n">features</span> <span class="o">=</span> <span class="n">transformed_df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;price&#39;</span><span class="p">])</span>
+<span class="n">label</span> <span class="o">=</span> <span class="n">transformed_df</span><span class="p">[[</span><span class="s1">&#39;price&#39;</span><span class="p">]]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="c1"># Train/ test/ val split</span>
+<span class="n">train_ratio</span> <span class="o">=</span> <span class="mf">0.75</span>
+<span class="n">validation_ratio</span> <span class="o">=</span> <span class="mf">0.15</span>
+<span class="n">test_ratio</span> <span class="o">=</span> <span class="mf">0.10</span>
+
+<span class="c1"># train is now 75% of the entire data set</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">features</span><span class="p">,</span> <span class="n">label</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mi">1</span> <span class="o">-</span> <span class="n">train_ratio</span><span class="p">)</span>
+
+<span class="c1"># test is now 10% of the initial data set</span>
+<span class="c1"># validation is now 15% of the initial data set</span>
+<span class="n">X_val</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_val</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="n">test_ratio</span><span class="o">/</span><span class="p">(</span><span class="n">test_ratio</span> <span class="o">+</span> <span class="n">validation_ratio</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-python"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;length of Train set:&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">X_train</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;length of Validation set:&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">X_val</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;length of Test set:&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">X_test</span><span class="p">))</span>
 </pre></div>
 
@@ -14079,8 +14507,9 @@ dtype: int64
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>length of Train set: 43152
-length of Test set: 10788
+<pre>length of Train set: 40455
+length of Validation set: 8091
+length of Test set: 5394
 </pre>
 </div>
 </div>
@@ -14091,12 +14520,13 @@ length of Test set: 10788
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[60]:</div>
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-python"><pre><span></span><span class="c1"># Scale data</span>
 <span class="n">scaler</span> <span class="o">=</span> <span class="n">RobustScaler</span><span class="p">()</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
 <span class="n">X_train_scaled</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
+<span class="n">X_val_scaled</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_val</span><span class="p">)</span>
 <span class="n">X_test_scaled</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
 </pre></div>
 
@@ -14114,7 +14544,7 @@ length of Test set: 10788
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[106]:</div>
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-python"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">Sequential</span><span class="p">([</span>
@@ -14135,7 +14565,7 @@ length of Test set: 10788
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[107]:</div>
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-python"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
@@ -14186,7 +14616,7 @@ _________________________________________________________________
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[108]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-python"><pre><span></span><span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">plot_model</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">show_shapes</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -14202,7 +14632,7 @@ _________________________________________________________________
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[108]:</div>
+    <div class="prompt output_prompt">Out[&nbsp;]:</div>
 
 
 
@@ -14221,7 +14651,7 @@ _________________________________________________________________
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[104]:</div>
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-python"><pre><span></span><span class="k">def</span> <span class="nf">train_model</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
@@ -14238,7 +14668,7 @@ _________________________________________________________________
   <span class="n">logdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;logs&quot;</span><span class="p">,</span> <span class="n">argname</span><span class="p">(</span><span class="s1">&#39;model&#39;</span><span class="p">))</span>
   <span class="n">tensorboard_callback</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">callbacks</span><span class="o">.</span><span class="n">TensorBoard</span><span class="p">(</span><span class="n">logdir</span><span class="p">,</span> <span class="n">histogram_freq</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 
-  <span class="k">return</span> <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train_scaled</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">validation_data</span><span class="o">=</span><span class="p">(</span><span class="n">X_test_scaled</span><span class="p">,</span> <span class="n">y_test</span><span class="p">),</span> <span class="n">epochs</span><span class="o">=</span><span class="n">epochs</span><span class="p">,</span> <span class="n">callbacks</span><span class="o">=</span><span class="p">[</span><span class="n">checkpoint</span><span class="p">,</span> <span class="n">tensorboard_callback</span><span class="p">])</span>
+  <span class="k">return</span> <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train_scaled</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">validation_data</span><span class="o">=</span><span class="p">(</span><span class="n">X_val_scaled</span><span class="p">,</span> <span class="n">y_val</span><span class="p">),</span> <span class="n">epochs</span><span class="o">=</span><span class="n">epochs</span><span class="p">,</span> <span class="n">callbacks</span><span class="o">=</span><span class="p">[</span><span class="n">checkpoint</span><span class="p">,</span> <span class="n">tensorboard_callback</span><span class="p">])</span>
 </pre></div>
 
     </div>
@@ -14248,7 +14678,7 @@ _________________________________________________________________
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[109]:</div>
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-python"><pre><span></span><span class="n">history</span> <span class="o">=</span> <span class="n">train_model</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
@@ -14269,405 +14699,405 @@ _________________________________________________________________
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Epoch 1/100
-1349/1349 [==============================] - ETA: 0s - loss: 774.4876 - mean_absolute_error: 774.4876
-Epoch 1: mean_absolute_error improved from inf to 774.48761, saving model to weights-improvement-01-774.49.hdf5
-1349/1349 [==============================] - 7s 5ms/step - loss: 774.4876 - mean_absolute_error: 774.4876 - val_loss: 558.7953 - val_mean_absolute_error: 558.7953
+1259/1265 [============================&gt;.] - ETA: 0s - loss: 639.1340 - mean_absolute_error: 639.1340
+Epoch 1: mean_absolute_error improved from inf to 637.95361, saving model to weights-improvement-01-637.95.hdf5
+1265/1265 [==============================] - 9s 6ms/step - loss: 637.9536 - mean_absolute_error: 637.9536 - val_loss: 380.6770 - val_mean_absolute_error: 380.6770
 Epoch 2/100
-1341/1349 [============================&gt;.] - ETA: 0s - loss: 537.1193 - mean_absolute_error: 537.1193
-Epoch 2: mean_absolute_error improved from 774.48761 to 536.93732, saving model to weights-improvement-02-536.94.hdf5
-1349/1349 [==============================] - 6s 5ms/step - loss: 536.9373 - mean_absolute_error: 536.9373 - val_loss: 509.0951 - val_mean_absolute_error: 509.0951
+1264/1265 [============================&gt;.] - ETA: 0s - loss: 367.7052 - mean_absolute_error: 367.7052
+Epoch 2: mean_absolute_error improved from 637.95361 to 367.75867, saving model to weights-improvement-02-367.76.hdf5
+1265/1265 [==============================] - 7s 6ms/step - loss: 367.7587 - mean_absolute_error: 367.7587 - val_loss: 385.0883 - val_mean_absolute_error: 385.0883
 Epoch 3/100
-1345/1349 [============================&gt;.] - ETA: 0s - loss: 509.6210 - mean_absolute_error: 509.6210
-Epoch 3: mean_absolute_error improved from 536.93732 to 509.52539, saving model to weights-improvement-03-509.53.hdf5
-1349/1349 [==============================] - 6s 5ms/step - loss: 509.5254 - mean_absolute_error: 509.5254 - val_loss: 486.2484 - val_mean_absolute_error: 486.2484
+1265/1265 [==============================] - ETA: 0s - loss: 355.6994 - mean_absolute_error: 355.6994
+Epoch 3: mean_absolute_error improved from 367.75867 to 355.69943, saving model to weights-improvement-03-355.70.hdf5
+1265/1265 [==============================] - 8s 6ms/step - loss: 355.6994 - mean_absolute_error: 355.6994 - val_loss: 358.0334 - val_mean_absolute_error: 358.0334
 Epoch 4/100
-1342/1349 [============================&gt;.] - ETA: 0s - loss: 492.1615 - mean_absolute_error: 492.1615
-Epoch 4: mean_absolute_error improved from 509.52539 to 491.57745, saving model to weights-improvement-04-491.58.hdf5
-1349/1349 [==============================] - 6s 5ms/step - loss: 491.5775 - mean_absolute_error: 491.5775 - val_loss: 470.7024 - val_mean_absolute_error: 470.7024
+1265/1265 [==============================] - ETA: 0s - loss: 349.8483 - mean_absolute_error: 349.8483
+Epoch 4: mean_absolute_error improved from 355.69943 to 349.84830, saving model to weights-improvement-04-349.85.hdf5
+1265/1265 [==============================] - 7s 6ms/step - loss: 349.8483 - mean_absolute_error: 349.8483 - val_loss: 378.0656 - val_mean_absolute_error: 378.0656
 Epoch 5/100
-1340/1349 [============================&gt;.] - ETA: 0s - loss: 476.9350 - mean_absolute_error: 476.9350
-Epoch 5: mean_absolute_error improved from 491.57745 to 476.57166, saving model to weights-improvement-05-476.57.hdf5
-1349/1349 [==============================] - 6s 4ms/step - loss: 476.5717 - mean_absolute_error: 476.5717 - val_loss: 484.7344 - val_mean_absolute_error: 484.7344
+1260/1265 [============================&gt;.] - ETA: 0s - loss: 345.9742 - mean_absolute_error: 345.9742
+Epoch 5: mean_absolute_error improved from 349.84830 to 345.89813, saving model to weights-improvement-05-345.90.hdf5
+1265/1265 [==============================] - 7s 6ms/step - loss: 345.8981 - mean_absolute_error: 345.8981 - val_loss: 384.5369 - val_mean_absolute_error: 384.5369
 Epoch 6/100
-1349/1349 [==============================] - ETA: 0s - loss: 459.2929 - mean_absolute_error: 459.2929
-Epoch 6: mean_absolute_error improved from 476.57166 to 459.29291, saving model to weights-improvement-06-459.29.hdf5
-1349/1349 [==============================] - 6s 5ms/step - loss: 459.2929 - mean_absolute_error: 459.2929 - val_loss: 447.2761 - val_mean_absolute_error: 447.2761
+1259/1265 [============================&gt;.] - ETA: 0s - loss: 343.6675 - mean_absolute_error: 343.6675
+Epoch 6: mean_absolute_error improved from 345.89813 to 343.36826, saving model to weights-improvement-06-343.37.hdf5
+1265/1265 [==============================] - 7s 6ms/step - loss: 343.3683 - mean_absolute_error: 343.3683 - val_loss: 402.6358 - val_mean_absolute_error: 402.6358
 Epoch 7/100
-1346/1349 [============================&gt;.] - ETA: 0s - loss: 438.2114 - mean_absolute_error: 438.2114
-Epoch 7: mean_absolute_error improved from 459.29291 to 438.47067, saving model to weights-improvement-07-438.47.hdf5
-1349/1349 [==============================] - 6s 5ms/step - loss: 438.4707 - mean_absolute_error: 438.4707 - val_loss: 416.7545 - val_mean_absolute_error: 416.7545
+1257/1265 [============================&gt;.] - ETA: 0s - loss: 335.0021 - mean_absolute_error: 335.0021
+Epoch 7: mean_absolute_error improved from 343.36826 to 334.75772, saving model to weights-improvement-07-334.76.hdf5
+1265/1265 [==============================] - 8s 6ms/step - loss: 334.7577 - mean_absolute_error: 334.7577 - val_loss: 351.1917 - val_mean_absolute_error: 351.1917
 Epoch 8/100
-1343/1349 [============================&gt;.] - ETA: 0s - loss: 415.3759 - mean_absolute_error: 415.3759
-Epoch 8: mean_absolute_error improved from 438.47067 to 415.04724, saving model to weights-improvement-08-415.05.hdf5
-1349/1349 [==============================] - 6s 4ms/step - loss: 415.0472 - mean_absolute_error: 415.0472 - val_loss: 390.1053 - val_mean_absolute_error: 390.1053
+1258/1265 [============================&gt;.] - ETA: 0s - loss: 330.4173 - mean_absolute_error: 330.4173
+Epoch 8: mean_absolute_error improved from 334.75772 to 330.33197, saving model to weights-improvement-08-330.33.hdf5
+1265/1265 [==============================] - 8s 6ms/step - loss: 330.3320 - mean_absolute_error: 330.3320 - val_loss: 338.7557 - val_mean_absolute_error: 338.7557
 Epoch 9/100
-1338/1349 [============================&gt;.] - ETA: 0s - loss: 384.8648 - mean_absolute_error: 384.8648
-Epoch 9: mean_absolute_error improved from 415.04724 to 384.78894, saving model to weights-improvement-09-384.79.hdf5
-1349/1349 [==============================] - 6s 4ms/step - loss: 384.7889 - mean_absolute_error: 384.7889 - val_loss: 374.1015 - val_mean_absolute_error: 374.1015
+1258/1265 [============================&gt;.] - ETA: 0s - loss: 327.7271 - mean_absolute_error: 327.7271
+Epoch 9: mean_absolute_error improved from 330.33197 to 327.21463, saving model to weights-improvement-09-327.21.hdf5
+1265/1265 [==============================] - 7s 6ms/step - loss: 327.2146 - mean_absolute_error: 327.2146 - val_loss: 333.4742 - val_mean_absolute_error: 333.4742
 Epoch 10/100
-1348/1349 [============================&gt;.] - ETA: 0s - loss: 368.9155 - mean_absolute_error: 368.9155
-Epoch 10: mean_absolute_error improved from 384.78894 to 368.82257, saving model to weights-improvement-10-368.82.hdf5
-1349/1349 [==============================] - 6s 5ms/step - loss: 368.8226 - mean_absolute_error: 368.8226 - val_loss: 351.9679 - val_mean_absolute_error: 351.9679
+1258/1265 [============================&gt;.] - ETA: 0s - loss: 323.8751 - mean_absolute_error: 323.8751
+Epoch 10: mean_absolute_error improved from 327.21463 to 323.78610, saving model to weights-improvement-10-323.79.hdf5
+1265/1265 [==============================] - 7s 6ms/step - loss: 323.7861 - mean_absolute_error: 323.7861 - val_loss: 340.0710 - val_mean_absolute_error: 340.0710
 Epoch 11/100
-1342/1349 [============================&gt;.] - ETA: 0s - loss: 365.5459 - mean_absolute_error: 365.5459
-Epoch 11: mean_absolute_error improved from 368.82257 to 365.28433, saving model to weights-improvement-11-365.28.hdf5
-1349/1349 [==============================] - 6s 4ms/step - loss: 365.2843 - mean_absolute_error: 365.2843 - val_loss: 356.0140 - val_mean_absolute_error: 356.0140
+1259/1265 [============================&gt;.] - ETA: 0s - loss: 320.3156 - mean_absolute_error: 320.3156
+Epoch 11: mean_absolute_error improved from 323.78610 to 320.45111, saving model to weights-improvement-11-320.45.hdf5
+1265/1265 [==============================] - 8s 6ms/step - loss: 320.4511 - mean_absolute_error: 320.4511 - val_loss: 356.3799 - val_mean_absolute_error: 356.3799
 Epoch 12/100
-1339/1349 [============================&gt;.] - ETA: 0s - loss: 350.0996 - mean_absolute_error: 350.0996
-Epoch 12: mean_absolute_error improved from 365.28433 to 349.92569, saving model to weights-improvement-12-349.93.hdf5
-1349/1349 [==============================] - 6s 4ms/step - loss: 349.9257 - mean_absolute_error: 349.9257 - val_loss: 335.4145 - val_mean_absolute_error: 335.4145
+1264/1265 [============================&gt;.] - ETA: 0s - loss: 313.6003 - mean_absolute_error: 313.6003
+Epoch 12: mean_absolute_error improved from 320.45111 to 313.58411, saving model to weights-improvement-12-313.58.hdf5
+1265/1265 [==============================] - 8s 6ms/step - loss: 313.5841 - mean_absolute_error: 313.5841 - val_loss: 328.6271 - val_mean_absolute_error: 328.6271
 Epoch 13/100
-1348/1349 [============================&gt;.] - ETA: 0s - loss: 337.9021 - mean_absolute_error: 337.9021
-Epoch 13: mean_absolute_error improved from 349.92569 to 337.85699, saving model to weights-improvement-13-337.86.hdf5
-1349/1349 [==============================] - 6s 5ms/step - loss: 337.8570 - mean_absolute_error: 337.8570 - val_loss: 347.5824 - val_mean_absolute_error: 347.5824
+1263/1265 [============================&gt;.] - ETA: 0s - loss: 310.1164 - mean_absolute_error: 310.1164
+Epoch 13: mean_absolute_error improved from 313.58411 to 310.27042, saving model to weights-improvement-13-310.27.hdf5
+1265/1265 [==============================] - 8s 7ms/step - loss: 310.2704 - mean_absolute_error: 310.2704 - val_loss: 317.4683 - val_mean_absolute_error: 317.4683
 Epoch 14/100
-1338/1349 [============================&gt;.] - ETA: 0s - loss: 330.4294 - mean_absolute_error: 330.4294
-Epoch 14: mean_absolute_error improved from 337.85699 to 330.79407, saving model to weights-improvement-14-330.79.hdf5
-1349/1349 [==============================] - 6s 4ms/step - loss: 330.7941 - mean_absolute_error: 330.7941 - val_loss: 322.9715 - val_mean_absolute_error: 322.9715
+1264/1265 [============================&gt;.] - ETA: 0s - loss: 306.4326 - mean_absolute_error: 306.4326
+Epoch 14: mean_absolute_error improved from 310.27042 to 306.42725, saving model to weights-improvement-14-306.43.hdf5
+1265/1265 [==============================] - 8s 6ms/step - loss: 306.4272 - mean_absolute_error: 306.4272 - val_loss: 321.3404 - val_mean_absolute_error: 321.3404
 Epoch 15/100
-1336/1349 [============================&gt;.] - ETA: 0s - loss: 329.7931 - mean_absolute_error: 329.7931
-Epoch 15: mean_absolute_error improved from 330.79407 to 329.87476, saving model to weights-improvement-15-329.87.hdf5
-1349/1349 [==============================] - 6s 5ms/step - loss: 329.8748 - mean_absolute_error: 329.8748 - val_loss: 339.9319 - val_mean_absolute_error: 339.9319
+1263/1265 [============================&gt;.] - ETA: 0s - loss: 305.3815 - mean_absolute_error: 305.3815
+Epoch 15: mean_absolute_error improved from 306.42725 to 305.48087, saving model to weights-improvement-15-305.48.hdf5
+1265/1265 [==============================] - 8s 6ms/step - loss: 305.4809 - mean_absolute_error: 305.4809 - val_loss: 310.5287 - val_mean_absolute_error: 310.5287
 Epoch 16/100
-1349/1349 [==============================] - ETA: 0s - loss: 324.6211 - mean_absolute_error: 324.6211
-Epoch 16: mean_absolute_error improved from 329.87476 to 324.62109, saving model to weights-improvement-16-324.62.hdf5
-1349/1349 [==============================] - 6s 4ms/step - loss: 324.6211 - mean_absolute_error: 324.6211 - val_loss: 342.1809 - val_mean_absolute_error: 342.1809
+1258/1265 [============================&gt;.] - ETA: 0s - loss: 302.8147 - mean_absolute_error: 302.8147
+Epoch 16: mean_absolute_error improved from 305.48087 to 302.71469, saving model to weights-improvement-16-302.71.hdf5
+1265/1265 [==============================] - 8s 6ms/step - loss: 302.7147 - mean_absolute_error: 302.7147 - val_loss: 297.6219 - val_mean_absolute_error: 297.6219
 Epoch 17/100
-1344/1349 [============================&gt;.] - ETA: 0s - loss: 318.3951 - mean_absolute_error: 318.3951
-Epoch 17: mean_absolute_error improved from 324.62109 to 318.48071, saving model to weights-improvement-17-318.48.hdf5
-1349/1349 [==============================] - 6s 4ms/step - loss: 318.4807 - mean_absolute_error: 318.4807 - val_loss: 313.3109 - val_mean_absolute_error: 313.3109
+1264/1265 [============================&gt;.] - ETA: 0s - loss: 297.1623 - mean_absolute_error: 297.1623
+Epoch 17: mean_absolute_error improved from 302.71469 to 297.19492, saving model to weights-improvement-17-297.19.hdf5
+1265/1265 [==============================] - 8s 6ms/step - loss: 297.1949 - mean_absolute_error: 297.1949 - val_loss: 321.2758 - val_mean_absolute_error: 321.2758
 Epoch 18/100
-1347/1349 [============================&gt;.] - ETA: 0s - loss: 313.0263 - mean_absolute_error: 313.0263
-Epoch 18: mean_absolute_error improved from 318.48071 to 313.15686, saving model to weights-improvement-18-313.16.hdf5
-1349/1349 [==============================] - 6s 4ms/step - loss: 313.1569 - mean_absolute_error: 313.1569 - val_loss: 332.6093 - val_mean_absolute_error: 332.6093
+1264/1265 [============================&gt;.] - ETA: 0s - loss: 297.1518 - mean_absolute_error: 297.1518
+Epoch 18: mean_absolute_error improved from 297.19492 to 297.13452, saving model to weights-improvement-18-297.13.hdf5
+1265/1265 [==============================] - 7s 6ms/step - loss: 297.1345 - mean_absolute_error: 297.1345 - val_loss: 308.8569 - val_mean_absolute_error: 308.8569
 Epoch 19/100
-1340/1349 [============================&gt;.] - ETA: 0s - loss: 310.9282 - mean_absolute_error: 310.9282
-Epoch 19: mean_absolute_error improved from 313.15686 to 310.44931, saving model to weights-improvement-19-310.45.hdf5
-1349/1349 [==============================] - 6s 4ms/step - loss: 310.4493 - mean_absolute_error: 310.4493 - val_loss: 307.5517 - val_mean_absolute_error: 307.5517
+1261/1265 [============================&gt;.] - ETA: 0s - loss: 296.5583 - mean_absolute_error: 296.5583
+Epoch 19: mean_absolute_error improved from 297.13452 to 296.36694, saving model to weights-improvement-19-296.37.hdf5
+1265/1265 [==============================] - 8s 6ms/step - loss: 296.3669 - mean_absolute_error: 296.3669 - val_loss: 311.2432 - val_mean_absolute_error: 311.2432
 Epoch 20/100
-1338/1349 [============================&gt;.] - ETA: 0s - loss: 311.4225 - mean_absolute_error: 311.4225
-Epoch 20: mean_absolute_error did not improve from 310.44931
-1349/1349 [==============================] - 6s 5ms/step - loss: 311.3820 - mean_absolute_error: 311.3820 - val_loss: 323.3021 - val_mean_absolute_error: 323.3021
+1265/1265 [==============================] - ETA: 0s - loss: 289.4560 - mean_absolute_error: 289.4560
+Epoch 20: mean_absolute_error improved from 296.36694 to 289.45599, saving model to weights-improvement-20-289.46.hdf5
+1265/1265 [==============================] - 8s 6ms/step - loss: 289.4560 - mean_absolute_error: 289.4560 - val_loss: 303.3308 - val_mean_absolute_error: 303.3308
 Epoch 21/100
-1341/1349 [============================&gt;.] - ETA: 0s - loss: 305.7248 - mean_absolute_error: 305.7248
-Epoch 21: mean_absolute_error improved from 310.44931 to 305.62131, saving model to weights-improvement-21-305.62.hdf5
-1349/1349 [==============================] - 6s 5ms/step - loss: 305.6213 - mean_absolute_error: 305.6213 - val_loss: 322.3573 - val_mean_absolute_error: 322.3573
+1257/1265 [============================&gt;.] - ETA: 0s - loss: 290.5812 - mean_absolute_error: 290.5812
+Epoch 21: mean_absolute_error did not improve from 289.45599
+1265/1265 [==============================] - 8s 6ms/step - loss: 290.2626 - mean_absolute_error: 290.2626 - val_loss: 297.0539 - val_mean_absolute_error: 297.0539
 Epoch 22/100
-1343/1349 [============================&gt;.] - ETA: 0s - loss: 303.8369 - mean_absolute_error: 303.8369
-Epoch 22: mean_absolute_error improved from 305.62131 to 303.76883, saving model to weights-improvement-22-303.77.hdf5
-1349/1349 [==============================] - 6s 5ms/step - loss: 303.7688 - mean_absolute_error: 303.7688 - val_loss: 295.6324 - val_mean_absolute_error: 295.6324
+1258/1265 [============================&gt;.] - ETA: 0s - loss: 286.1512 - mean_absolute_error: 286.1512
+Epoch 22: mean_absolute_error improved from 289.45599 to 286.25427, saving model to weights-improvement-22-286.25.hdf5
+1265/1265 [==============================] - 8s 6ms/step - loss: 286.2543 - mean_absolute_error: 286.2543 - val_loss: 293.4465 - val_mean_absolute_error: 293.4465
 Epoch 23/100
-1343/1349 [============================&gt;.] - ETA: 0s - loss: 299.0794 - mean_absolute_error: 299.0794
-Epoch 23: mean_absolute_error improved from 303.76883 to 298.95459, saving model to weights-improvement-23-298.95.hdf5
-1349/1349 [==============================] - 6s 5ms/step - loss: 298.9546 - mean_absolute_error: 298.9546 - val_loss: 304.3701 - val_mean_absolute_error: 304.3701
+1264/1265 [============================&gt;.] - ETA: 0s - loss: 286.7801 - mean_absolute_error: 286.7801
+Epoch 23: mean_absolute_error did not improve from 286.25427
+1265/1265 [==============================] - 8s 6ms/step - loss: 286.7830 - mean_absolute_error: 286.7830 - val_loss: 294.6596 - val_mean_absolute_error: 294.6596
 Epoch 24/100
-1341/1349 [============================&gt;.] - ETA: 0s - loss: 299.0873 - mean_absolute_error: 299.0873
-Epoch 24: mean_absolute_error did not improve from 298.95459
-1349/1349 [==============================] - 6s 4ms/step - loss: 298.9765 - mean_absolute_error: 298.9765 - val_loss: 292.7173 - val_mean_absolute_error: 292.7173
+1260/1265 [============================&gt;.] - ETA: 0s - loss: 287.7505 - mean_absolute_error: 287.7505
+Epoch 24: mean_absolute_error did not improve from 286.25427
+1265/1265 [==============================] - 8s 6ms/step - loss: 287.7776 - mean_absolute_error: 287.7776 - val_loss: 292.6364 - val_mean_absolute_error: 292.6364
 Epoch 25/100
-1342/1349 [============================&gt;.] - ETA: 0s - loss: 298.0898 - mean_absolute_error: 298.0898
-Epoch 25: mean_absolute_error improved from 298.95459 to 297.84869, saving model to weights-improvement-25-297.85.hdf5
-1349/1349 [==============================] - 6s 5ms/step - loss: 297.8487 - mean_absolute_error: 297.8487 - val_loss: 286.2922 - val_mean_absolute_error: 286.2922
+1262/1265 [============================&gt;.] - ETA: 0s - loss: 286.3640 - mean_absolute_error: 286.3640
+Epoch 25: mean_absolute_error improved from 286.25427 to 286.24414, saving model to weights-improvement-25-286.24.hdf5
+1265/1265 [==============================] - 8s 6ms/step - loss: 286.2441 - mean_absolute_error: 286.2441 - val_loss: 285.0674 - val_mean_absolute_error: 285.0674
 Epoch 26/100
-1344/1349 [============================&gt;.] - ETA: 0s - loss: 296.5513 - mean_absolute_error: 296.5513
-Epoch 26: mean_absolute_error improved from 297.84869 to 296.60849, saving model to weights-improvement-26-296.61.hdf5
-1349/1349 [==============================] - 6s 5ms/step - loss: 296.6085 - mean_absolute_error: 296.6085 - val_loss: 296.9404 - val_mean_absolute_error: 296.9404
+1255/1265 [============================&gt;.] - ETA: 0s - loss: 284.7454 - mean_absolute_error: 284.7454
+Epoch 26: mean_absolute_error improved from 286.24414 to 284.68863, saving model to weights-improvement-26-284.69.hdf5
+1265/1265 [==============================] - 8s 6ms/step - loss: 284.6886 - mean_absolute_error: 284.6886 - val_loss: 311.6354 - val_mean_absolute_error: 311.6354
 Epoch 27/100
-1342/1349 [============================&gt;.] - ETA: 0s - loss: 294.1580 - mean_absolute_error: 294.1580
-Epoch 27: mean_absolute_error improved from 296.60849 to 294.14471, saving model to weights-improvement-27-294.14.hdf5
-1349/1349 [==============================] - 6s 5ms/step - loss: 294.1447 - mean_absolute_error: 294.1447 - val_loss: 285.1354 - val_mean_absolute_error: 285.1354
+1260/1265 [============================&gt;.] - ETA: 0s - loss: 286.6727 - mean_absolute_error: 286.6727
+Epoch 27: mean_absolute_error did not improve from 284.68863
+1265/1265 [==============================] - 8s 6ms/step - loss: 286.7233 - mean_absolute_error: 286.7233 - val_loss: 292.3132 - val_mean_absolute_error: 292.3132
 Epoch 28/100
-1348/1349 [============================&gt;.] - ETA: 0s - loss: 290.3198 - mean_absolute_error: 290.3198
-Epoch 28: mean_absolute_error improved from 294.14471 to 290.34244, saving model to weights-improvement-28-290.34.hdf5
-1349/1349 [==============================] - 6s 5ms/step - loss: 290.3424 - mean_absolute_error: 290.3424 - val_loss: 285.3461 - val_mean_absolute_error: 285.3461
+1265/1265 [==============================] - ETA: 0s - loss: 281.5574 - mean_absolute_error: 281.5574
+Epoch 28: mean_absolute_error improved from 284.68863 to 281.55737, saving model to weights-improvement-28-281.56.hdf5
+1265/1265 [==============================] - 8s 6ms/step - loss: 281.5574 - mean_absolute_error: 281.5574 - val_loss: 305.6316 - val_mean_absolute_error: 305.6316
 Epoch 29/100
-1345/1349 [============================&gt;.] - ETA: 0s - loss: 290.6504 - mean_absolute_error: 290.6504
-Epoch 29: mean_absolute_error did not improve from 290.34244
-1349/1349 [==============================] - 6s 5ms/step - loss: 290.4413 - mean_absolute_error: 290.4413 - val_loss: 285.1990 - val_mean_absolute_error: 285.1990
+1256/1265 [============================&gt;.] - ETA: 0s - loss: 282.7979 - mean_absolute_error: 282.7979
+Epoch 29: mean_absolute_error did not improve from 281.55737
+1265/1265 [==============================] - 8s 6ms/step - loss: 282.7581 - mean_absolute_error: 282.7581 - val_loss: 287.1874 - val_mean_absolute_error: 287.1874
 Epoch 30/100
-1338/1349 [============================&gt;.] - ETA: 0s - loss: 288.5540 - mean_absolute_error: 288.5540
-Epoch 30: mean_absolute_error improved from 290.34244 to 288.80927, saving model to weights-improvement-30-288.81.hdf5
-1349/1349 [==============================] - 7s 5ms/step - loss: 288.8093 - mean_absolute_error: 288.8093 - val_loss: 283.3498 - val_mean_absolute_error: 283.3498
+1258/1265 [============================&gt;.] - ETA: 0s - loss: 278.8539 - mean_absolute_error: 278.8539
+Epoch 30: mean_absolute_error improved from 281.55737 to 279.09290, saving model to weights-improvement-30-279.09.hdf5
+1265/1265 [==============================] - 8s 6ms/step - loss: 279.0929 - mean_absolute_error: 279.0929 - val_loss: 289.3880 - val_mean_absolute_error: 289.3880
 Epoch 31/100
-1348/1349 [============================&gt;.] - ETA: 0s - loss: 286.6851 - mean_absolute_error: 286.6851
-Epoch 31: mean_absolute_error improved from 288.80927 to 286.64566, saving model to weights-improvement-31-286.65.hdf5
-1349/1349 [==============================] - 6s 5ms/step - loss: 286.6457 - mean_absolute_error: 286.6457 - val_loss: 286.4461 - val_mean_absolute_error: 286.4461
+1257/1265 [============================&gt;.] - ETA: 0s - loss: 281.6431 - mean_absolute_error: 281.6431
+Epoch 31: mean_absolute_error did not improve from 279.09290
+1265/1265 [==============================] - 8s 7ms/step - loss: 281.5314 - mean_absolute_error: 281.5314 - val_loss: 282.2348 - val_mean_absolute_error: 282.2348
 Epoch 32/100
-1340/1349 [============================&gt;.] - ETA: 0s - loss: 288.4488 - mean_absolute_error: 288.4488
-Epoch 32: mean_absolute_error did not improve from 286.64566
-1349/1349 [==============================] - 7s 5ms/step - loss: 288.4268 - mean_absolute_error: 288.4268 - val_loss: 285.0170 - val_mean_absolute_error: 285.0170
+1259/1265 [============================&gt;.] - ETA: 0s - loss: 280.4450 - mean_absolute_error: 280.4450
+Epoch 32: mean_absolute_error did not improve from 279.09290
+1265/1265 [==============================] - 8s 7ms/step - loss: 280.4958 - mean_absolute_error: 280.4958 - val_loss: 285.4017 - val_mean_absolute_error: 285.4017
 Epoch 33/100
-1341/1349 [============================&gt;.] - ETA: 0s - loss: 286.8047 - mean_absolute_error: 286.8047
-Epoch 33: mean_absolute_error improved from 286.64566 to 286.58289, saving model to weights-improvement-33-286.58.hdf5
-1349/1349 [==============================] - 6s 5ms/step - loss: 286.5829 - mean_absolute_error: 286.5829 - val_loss: 283.7454 - val_mean_absolute_error: 283.7454
+1262/1265 [============================&gt;.] - ETA: 0s - loss: 278.5468 - mean_absolute_error: 278.5468
+Epoch 33: mean_absolute_error improved from 279.09290 to 278.58502, saving model to weights-improvement-33-278.59.hdf5
+1265/1265 [==============================] - 8s 6ms/step - loss: 278.5850 - mean_absolute_error: 278.5850 - val_loss: 287.6161 - val_mean_absolute_error: 287.6161
 Epoch 34/100
-1346/1349 [============================&gt;.] - ETA: 0s - loss: 286.1363 - mean_absolute_error: 286.1363
-Epoch 34: mean_absolute_error improved from 286.58289 to 285.99811, saving model to weights-improvement-34-286.00.hdf5
-1349/1349 [==============================] - 7s 5ms/step - loss: 285.9981 - mean_absolute_error: 285.9981 - val_loss: 302.1053 - val_mean_absolute_error: 302.1053
+1257/1265 [============================&gt;.] - ETA: 0s - loss: 279.0099 - mean_absolute_error: 279.0099
+Epoch 34: mean_absolute_error did not improve from 278.58502
+1265/1265 [==============================] - 8s 7ms/step - loss: 279.2167 - mean_absolute_error: 279.2167 - val_loss: 283.8422 - val_mean_absolute_error: 283.8422
 Epoch 35/100
-1344/1349 [============================&gt;.] - ETA: 0s - loss: 285.8547 - mean_absolute_error: 285.8547
-Epoch 35: mean_absolute_error improved from 285.99811 to 285.68231, saving model to weights-improvement-35-285.68.hdf5
-1349/1349 [==============================] - 7s 5ms/step - loss: 285.6823 - mean_absolute_error: 285.6823 - val_loss: 293.9853 - val_mean_absolute_error: 293.9853
+1262/1265 [============================&gt;.] - ETA: 0s - loss: 276.6989 - mean_absolute_error: 276.6989
+Epoch 35: mean_absolute_error improved from 278.58502 to 276.87033, saving model to weights-improvement-35-276.87.hdf5
+1265/1265 [==============================] - 8s 6ms/step - loss: 276.8703 - mean_absolute_error: 276.8703 - val_loss: 280.4195 - val_mean_absolute_error: 280.4195
 Epoch 36/100
-1344/1349 [============================&gt;.] - ETA: 0s - loss: 284.3457 - mean_absolute_error: 284.3457
-Epoch 36: mean_absolute_error improved from 285.68231 to 284.73734, saving model to weights-improvement-36-284.74.hdf5
-1349/1349 [==============================] - 6s 5ms/step - loss: 284.7373 - mean_absolute_error: 284.7373 - val_loss: 290.5188 - val_mean_absolute_error: 290.5188
+1262/1265 [============================&gt;.] - ETA: 0s - loss: 276.4701 - mean_absolute_error: 276.4701
+Epoch 36: mean_absolute_error improved from 276.87033 to 276.67957, saving model to weights-improvement-36-276.68.hdf5
+1265/1265 [==============================] - 8s 7ms/step - loss: 276.6796 - mean_absolute_error: 276.6796 - val_loss: 294.2118 - val_mean_absolute_error: 294.2118
 Epoch 37/100
-1345/1349 [============================&gt;.] - ETA: 0s - loss: 281.3199 - mean_absolute_error: 281.3199
-Epoch 37: mean_absolute_error improved from 284.73734 to 281.53098, saving model to weights-improvement-37-281.53.hdf5
-1349/1349 [==============================] - 6s 5ms/step - loss: 281.5310 - mean_absolute_error: 281.5310 - val_loss: 320.9291 - val_mean_absolute_error: 320.9291
+1259/1265 [============================&gt;.] - ETA: 0s - loss: 276.1359 - mean_absolute_error: 276.1359
+Epoch 37: mean_absolute_error improved from 276.67957 to 275.98996, saving model to weights-improvement-37-275.99.hdf5
+1265/1265 [==============================] - 9s 7ms/step - loss: 275.9900 - mean_absolute_error: 275.9900 - val_loss: 275.9763 - val_mean_absolute_error: 275.9763
 Epoch 38/100
-1343/1349 [============================&gt;.] - ETA: 0s - loss: 282.1176 - mean_absolute_error: 282.1176
-Epoch 38: mean_absolute_error did not improve from 281.53098
-1349/1349 [==============================] - 6s 5ms/step - loss: 282.2921 - mean_absolute_error: 282.2921 - val_loss: 276.2389 - val_mean_absolute_error: 276.2389
+1263/1265 [============================&gt;.] - ETA: 0s - loss: 276.0778 - mean_absolute_error: 276.0778
+Epoch 38: mean_absolute_error did not improve from 275.98996
+1265/1265 [==============================] - 8s 7ms/step - loss: 276.1714 - mean_absolute_error: 276.1714 - val_loss: 284.9231 - val_mean_absolute_error: 284.9231
 Epoch 39/100
-1343/1349 [============================&gt;.] - ETA: 0s - loss: 279.1843 - mean_absolute_error: 279.1843
-Epoch 39: mean_absolute_error improved from 281.53098 to 279.21536, saving model to weights-improvement-39-279.22.hdf5
-1349/1349 [==============================] - 6s 5ms/step - loss: 279.2154 - mean_absolute_error: 279.2154 - val_loss: 290.4435 - val_mean_absolute_error: 290.4435
+1262/1265 [============================&gt;.] - ETA: 0s - loss: 273.8408 - mean_absolute_error: 273.8408
+Epoch 39: mean_absolute_error improved from 275.98996 to 273.94272, saving model to weights-improvement-39-273.94.hdf5
+1265/1265 [==============================] - 8s 6ms/step - loss: 273.9427 - mean_absolute_error: 273.9427 - val_loss: 276.9903 - val_mean_absolute_error: 276.9903
 Epoch 40/100
-1348/1349 [============================&gt;.] - ETA: 0s - loss: 281.1144 - mean_absolute_error: 281.1144
-Epoch 40: mean_absolute_error did not improve from 279.21536
-1349/1349 [==============================] - 7s 5ms/step - loss: 281.0988 - mean_absolute_error: 281.0988 - val_loss: 287.6331 - val_mean_absolute_error: 287.6331
+1265/1265 [==============================] - ETA: 0s - loss: 272.4871 - mean_absolute_error: 272.4871
+Epoch 40: mean_absolute_error improved from 273.94272 to 272.48712, saving model to weights-improvement-40-272.49.hdf5
+1265/1265 [==============================] - 8s 6ms/step - loss: 272.4871 - mean_absolute_error: 272.4871 - val_loss: 297.6493 - val_mean_absolute_error: 297.6493
 Epoch 41/100
-1340/1349 [============================&gt;.] - ETA: 0s - loss: 280.3970 - mean_absolute_error: 280.3970
-Epoch 41: mean_absolute_error did not improve from 279.21536
-1349/1349 [==============================] - 7s 5ms/step - loss: 280.4532 - mean_absolute_error: 280.4532 - val_loss: 293.5721 - val_mean_absolute_error: 293.5721
+1263/1265 [============================&gt;.] - ETA: 0s - loss: 273.4190 - mean_absolute_error: 273.4190
+Epoch 41: mean_absolute_error did not improve from 272.48712
+1265/1265 [==============================] - 8s 6ms/step - loss: 273.5142 - mean_absolute_error: 273.5142 - val_loss: 280.0439 - val_mean_absolute_error: 280.0439
 Epoch 42/100
-1343/1349 [============================&gt;.] - ETA: 0s - loss: 281.6993 - mean_absolute_error: 281.6993
-Epoch 42: mean_absolute_error did not improve from 279.21536
-1349/1349 [==============================] - 7s 5ms/step - loss: 281.6227 - mean_absolute_error: 281.6227 - val_loss: 281.3785 - val_mean_absolute_error: 281.3785
+1262/1265 [============================&gt;.] - ETA: 0s - loss: 272.9012 - mean_absolute_error: 272.9012
+Epoch 42: mean_absolute_error did not improve from 272.48712
+1265/1265 [==============================] - 8s 6ms/step - loss: 272.8145 - mean_absolute_error: 272.8145 - val_loss: 296.7464 - val_mean_absolute_error: 296.7464
 Epoch 43/100
-1348/1349 [============================&gt;.] - ETA: 0s - loss: 277.9954 - mean_absolute_error: 277.9954
-Epoch 43: mean_absolute_error improved from 279.21536 to 277.94717, saving model to weights-improvement-43-277.95.hdf5
-1349/1349 [==============================] - 6s 5ms/step - loss: 277.9472 - mean_absolute_error: 277.9472 - val_loss: 277.4304 - val_mean_absolute_error: 277.4304
+1262/1265 [============================&gt;.] - ETA: 0s - loss: 272.8793 - mean_absolute_error: 272.8793
+Epoch 43: mean_absolute_error did not improve from 272.48712
+1265/1265 [==============================] - 8s 6ms/step - loss: 272.9663 - mean_absolute_error: 272.9663 - val_loss: 283.3323 - val_mean_absolute_error: 283.3323
 Epoch 44/100
-1345/1349 [============================&gt;.] - ETA: 0s - loss: 277.5956 - mean_absolute_error: 277.5956
-Epoch 44: mean_absolute_error improved from 277.94717 to 277.71014, saving model to weights-improvement-44-277.71.hdf5
-1349/1349 [==============================] - 6s 5ms/step - loss: 277.7101 - mean_absolute_error: 277.7101 - val_loss: 282.2267 - val_mean_absolute_error: 282.2267
+1259/1265 [============================&gt;.] - ETA: 0s - loss: 271.3137 - mean_absolute_error: 271.3137
+Epoch 44: mean_absolute_error improved from 272.48712 to 271.57199, saving model to weights-improvement-44-271.57.hdf5
+1265/1265 [==============================] - 8s 7ms/step - loss: 271.5720 - mean_absolute_error: 271.5720 - val_loss: 271.3825 - val_mean_absolute_error: 271.3825
 Epoch 45/100
-1349/1349 [==============================] - ETA: 0s - loss: 276.1640 - mean_absolute_error: 276.1640
-Epoch 45: mean_absolute_error improved from 277.71014 to 276.16397, saving model to weights-improvement-45-276.16.hdf5
-1349/1349 [==============================] - 7s 5ms/step - loss: 276.1640 - mean_absolute_error: 276.1640 - val_loss: 276.7436 - val_mean_absolute_error: 276.7436
+1264/1265 [============================&gt;.] - ETA: 0s - loss: 270.0831 - mean_absolute_error: 270.0831
+Epoch 45: mean_absolute_error improved from 271.57199 to 270.05893, saving model to weights-improvement-45-270.06.hdf5
+1265/1265 [==============================] - 8s 7ms/step - loss: 270.0589 - mean_absolute_error: 270.0589 - val_loss: 286.4104 - val_mean_absolute_error: 286.4104
 Epoch 46/100
-1348/1349 [============================&gt;.] - ETA: 0s - loss: 274.5306 - mean_absolute_error: 274.5306
-Epoch 46: mean_absolute_error improved from 276.16397 to 274.47379, saving model to weights-improvement-46-274.47.hdf5
-1349/1349 [==============================] - 7s 5ms/step - loss: 274.4738 - mean_absolute_error: 274.4738 - val_loss: 299.3880 - val_mean_absolute_error: 299.3880
+1264/1265 [============================&gt;.] - ETA: 0s - loss: 269.4193 - mean_absolute_error: 269.4193
+Epoch 46: mean_absolute_error improved from 270.05893 to 269.38785, saving model to weights-improvement-46-269.39.hdf5
+1265/1265 [==============================] - 9s 7ms/step - loss: 269.3878 - mean_absolute_error: 269.3878 - val_loss: 285.1411 - val_mean_absolute_error: 285.1411
 Epoch 47/100
-1344/1349 [============================&gt;.] - ETA: 0s - loss: 276.9000 - mean_absolute_error: 276.9000
-Epoch 47: mean_absolute_error did not improve from 274.47379
-1349/1349 [==============================] - 7s 5ms/step - loss: 276.9554 - mean_absolute_error: 276.9554 - val_loss: 268.1010 - val_mean_absolute_error: 268.1010
+1258/1265 [============================&gt;.] - ETA: 0s - loss: 269.1579 - mean_absolute_error: 269.1579
+Epoch 47: mean_absolute_error improved from 269.38785 to 269.15607, saving model to weights-improvement-47-269.16.hdf5
+1265/1265 [==============================] - 8s 7ms/step - loss: 269.1561 - mean_absolute_error: 269.1561 - val_loss: 283.1996 - val_mean_absolute_error: 283.1996
 Epoch 48/100
-1347/1349 [============================&gt;.] - ETA: 0s - loss: 275.2222 - mean_absolute_error: 275.2222
-Epoch 48: mean_absolute_error did not improve from 274.47379
-1349/1349 [==============================] - 7s 5ms/step - loss: 275.2349 - mean_absolute_error: 275.2349 - val_loss: 274.4192 - val_mean_absolute_error: 274.4192
+1258/1265 [============================&gt;.] - ETA: 0s - loss: 271.2296 - mean_absolute_error: 271.2296
+Epoch 48: mean_absolute_error did not improve from 269.15607
+1265/1265 [==============================] - 9s 7ms/step - loss: 271.1709 - mean_absolute_error: 271.1709 - val_loss: 340.4380 - val_mean_absolute_error: 340.4380
 Epoch 49/100
-1346/1349 [============================&gt;.] - ETA: 0s - loss: 274.0730 - mean_absolute_error: 274.0730
-Epoch 49: mean_absolute_error improved from 274.47379 to 273.93848, saving model to weights-improvement-49-273.94.hdf5
-1349/1349 [==============================] - 7s 5ms/step - loss: 273.9385 - mean_absolute_error: 273.9385 - val_loss: 283.9988 - val_mean_absolute_error: 283.9988
+1260/1265 [============================&gt;.] - ETA: 0s - loss: 267.8559 - mean_absolute_error: 267.8559
+Epoch 49: mean_absolute_error improved from 269.15607 to 267.78458, saving model to weights-improvement-49-267.78.hdf5
+1265/1265 [==============================] - 9s 7ms/step - loss: 267.7846 - mean_absolute_error: 267.7846 - val_loss: 274.3082 - val_mean_absolute_error: 274.3082
 Epoch 50/100
-1339/1349 [============================&gt;.] - ETA: 0s - loss: 272.3945 - mean_absolute_error: 272.3945
-Epoch 50: mean_absolute_error improved from 273.93848 to 272.35580, saving model to weights-improvement-50-272.36.hdf5
-1349/1349 [==============================] - 7s 5ms/step - loss: 272.3558 - mean_absolute_error: 272.3558 - val_loss: 301.9958 - val_mean_absolute_error: 301.9958
+1264/1265 [============================&gt;.] - ETA: 0s - loss: 265.8592 - mean_absolute_error: 265.8592
+Epoch 50: mean_absolute_error improved from 267.78458 to 265.91577, saving model to weights-improvement-50-265.92.hdf5
+1265/1265 [==============================] - 8s 7ms/step - loss: 265.9158 - mean_absolute_error: 265.9158 - val_loss: 278.4388 - val_mean_absolute_error: 278.4388
 Epoch 51/100
-1345/1349 [============================&gt;.] - ETA: 0s - loss: 272.4074 - mean_absolute_error: 272.4074
-Epoch 51: mean_absolute_error improved from 272.35580 to 272.25156, saving model to weights-improvement-51-272.25.hdf5
-1349/1349 [==============================] - 7s 6ms/step - loss: 272.2516 - mean_absolute_error: 272.2516 - val_loss: 274.6208 - val_mean_absolute_error: 274.6208
+1260/1265 [============================&gt;.] - ETA: 0s - loss: 267.9655 - mean_absolute_error: 267.9655
+Epoch 51: mean_absolute_error did not improve from 265.91577
+1265/1265 [==============================] - 8s 6ms/step - loss: 267.9618 - mean_absolute_error: 267.9618 - val_loss: 274.6984 - val_mean_absolute_error: 274.6984
 Epoch 52/100
-1342/1349 [============================&gt;.] - ETA: 0s - loss: 273.3203 - mean_absolute_error: 273.3203
-Epoch 52: mean_absolute_error did not improve from 272.25156
-1349/1349 [==============================] - 7s 5ms/step - loss: 273.4531 - mean_absolute_error: 273.4531 - val_loss: 272.2779 - val_mean_absolute_error: 272.2779
+1262/1265 [============================&gt;.] - ETA: 0s - loss: 266.1261 - mean_absolute_error: 266.1261
+Epoch 52: mean_absolute_error did not improve from 265.91577
+1265/1265 [==============================] - 8s 7ms/step - loss: 266.2105 - mean_absolute_error: 266.2105 - val_loss: 273.5969 - val_mean_absolute_error: 273.5969
 Epoch 53/100
-1342/1349 [============================&gt;.] - ETA: 0s - loss: 273.3130 - mean_absolute_error: 273.3130
-Epoch 53: mean_absolute_error did not improve from 272.25156
-1349/1349 [==============================] - 7s 5ms/step - loss: 273.1860 - mean_absolute_error: 273.1860 - val_loss: 282.5668 - val_mean_absolute_error: 282.5668
+1264/1265 [============================&gt;.] - ETA: 0s - loss: 265.7027 - mean_absolute_error: 265.7027
+Epoch 53: mean_absolute_error improved from 265.91577 to 265.68262, saving model to weights-improvement-53-265.68.hdf5
+1265/1265 [==============================] - 8s 7ms/step - loss: 265.6826 - mean_absolute_error: 265.6826 - val_loss: 272.3086 - val_mean_absolute_error: 272.3086
 Epoch 54/100
-1341/1349 [============================&gt;.] - ETA: 0s - loss: 273.2246 - mean_absolute_error: 273.2246
-Epoch 54: mean_absolute_error did not improve from 272.25156
-1349/1349 [==============================] - 7s 5ms/step - loss: 273.4385 - mean_absolute_error: 273.4385 - val_loss: 286.7553 - val_mean_absolute_error: 286.7553
+1262/1265 [============================&gt;.] - ETA: 0s - loss: 265.7254 - mean_absolute_error: 265.7254
+Epoch 54: mean_absolute_error did not improve from 265.68262
+1265/1265 [==============================] - 8s 7ms/step - loss: 265.6849 - mean_absolute_error: 265.6849 - val_loss: 273.5086 - val_mean_absolute_error: 273.5086
 Epoch 55/100
-1345/1349 [============================&gt;.] - ETA: 0s - loss: 272.7664 - mean_absolute_error: 272.7664
-Epoch 55: mean_absolute_error did not improve from 272.25156
-1349/1349 [==============================] - 7s 5ms/step - loss: 272.6816 - mean_absolute_error: 272.6816 - val_loss: 274.6158 - val_mean_absolute_error: 274.6158
+1259/1265 [============================&gt;.] - ETA: 0s - loss: 265.7057 - mean_absolute_error: 265.7057
+Epoch 55: mean_absolute_error improved from 265.68262 to 265.60809, saving model to weights-improvement-55-265.61.hdf5
+1265/1265 [==============================] - 8s 7ms/step - loss: 265.6081 - mean_absolute_error: 265.6081 - val_loss: 270.3545 - val_mean_absolute_error: 270.3545
 Epoch 56/100
-1349/1349 [==============================] - ETA: 0s - loss: 271.6465 - mean_absolute_error: 271.6465
-Epoch 56: mean_absolute_error improved from 272.25156 to 271.64651, saving model to weights-improvement-56-271.65.hdf5
-1349/1349 [==============================] - 7s 5ms/step - loss: 271.6465 - mean_absolute_error: 271.6465 - val_loss: 271.1880 - val_mean_absolute_error: 271.1880
+1263/1265 [============================&gt;.] - ETA: 0s - loss: 266.2277 - mean_absolute_error: 266.2277
+Epoch 56: mean_absolute_error did not improve from 265.60809
+1265/1265 [==============================] - 8s 7ms/step - loss: 266.1644 - mean_absolute_error: 266.1644 - val_loss: 272.3714 - val_mean_absolute_error: 272.3714
 Epoch 57/100
-1344/1349 [============================&gt;.] - ETA: 0s - loss: 267.8822 - mean_absolute_error: 267.8822
-Epoch 57: mean_absolute_error improved from 271.64651 to 267.64966, saving model to weights-improvement-57-267.65.hdf5
-1349/1349 [==============================] - 7s 5ms/step - loss: 267.6497 - mean_absolute_error: 267.6497 - val_loss: 276.1135 - val_mean_absolute_error: 276.1135
+1256/1265 [============================&gt;.] - ETA: 0s - loss: 264.2111 - mean_absolute_error: 264.2111
+Epoch 57: mean_absolute_error improved from 265.60809 to 264.37860, saving model to weights-improvement-57-264.38.hdf5
+1265/1265 [==============================] - 8s 7ms/step - loss: 264.3786 - mean_absolute_error: 264.3786 - val_loss: 293.0217 - val_mean_absolute_error: 293.0217
 Epoch 58/100
-1346/1349 [============================&gt;.] - ETA: 0s - loss: 271.2388 - mean_absolute_error: 271.2388
-Epoch 58: mean_absolute_error did not improve from 267.64966
-1349/1349 [==============================] - 7s 5ms/step - loss: 271.1587 - mean_absolute_error: 271.1587 - val_loss: 273.7256 - val_mean_absolute_error: 273.7256
+1258/1265 [============================&gt;.] - ETA: 0s - loss: 263.4483 - mean_absolute_error: 263.4483
+Epoch 58: mean_absolute_error improved from 264.37860 to 263.58954, saving model to weights-improvement-58-263.59.hdf5
+1265/1265 [==============================] - 8s 6ms/step - loss: 263.5895 - mean_absolute_error: 263.5895 - val_loss: 279.7920 - val_mean_absolute_error: 279.7920
 Epoch 59/100
-1343/1349 [============================&gt;.] - ETA: 0s - loss: 268.2073 - mean_absolute_error: 268.2073
-Epoch 59: mean_absolute_error did not improve from 267.64966
-1349/1349 [==============================] - 7s 5ms/step - loss: 268.0803 - mean_absolute_error: 268.0803 - val_loss: 269.3677 - val_mean_absolute_error: 269.3677
+1257/1265 [============================&gt;.] - ETA: 0s - loss: 264.6688 - mean_absolute_error: 264.6688
+Epoch 59: mean_absolute_error did not improve from 263.58954
+1265/1265 [==============================] - 8s 7ms/step - loss: 264.5265 - mean_absolute_error: 264.5265 - val_loss: 271.2824 - val_mean_absolute_error: 271.2824
 Epoch 60/100
-1344/1349 [============================&gt;.] - ETA: 0s - loss: 269.2738 - mean_absolute_error: 269.2738
-Epoch 60: mean_absolute_error did not improve from 267.64966
-1349/1349 [==============================] - 7s 5ms/step - loss: 269.4005 - mean_absolute_error: 269.4005 - val_loss: 279.4627 - val_mean_absolute_error: 279.4627
+1263/1265 [============================&gt;.] - ETA: 0s - loss: 263.2363 - mean_absolute_error: 263.2363
+Epoch 60: mean_absolute_error improved from 263.58954 to 263.14383, saving model to weights-improvement-60-263.14.hdf5
+1265/1265 [==============================] - 9s 7ms/step - loss: 263.1438 - mean_absolute_error: 263.1438 - val_loss: 280.9175 - val_mean_absolute_error: 280.9175
 Epoch 61/100
-1337/1349 [============================&gt;.] - ETA: 0s - loss: 269.3864 - mean_absolute_error: 269.3864
-Epoch 61: mean_absolute_error did not improve from 267.64966
-1349/1349 [==============================] - 7s 5ms/step - loss: 269.1128 - mean_absolute_error: 269.1128 - val_loss: 281.0914 - val_mean_absolute_error: 281.0914
+1258/1265 [============================&gt;.] - ETA: 0s - loss: 265.5677 - mean_absolute_error: 265.5677
+Epoch 61: mean_absolute_error did not improve from 263.14383
+1265/1265 [==============================] - 8s 7ms/step - loss: 265.7252 - mean_absolute_error: 265.7252 - val_loss: 286.4639 - val_mean_absolute_error: 286.4639
 Epoch 62/100
-1338/1349 [============================&gt;.] - ETA: 0s - loss: 268.6048 - mean_absolute_error: 268.6048
-Epoch 62: mean_absolute_error did not improve from 267.64966
-1349/1349 [==============================] - 6s 5ms/step - loss: 268.5069 - mean_absolute_error: 268.5069 - val_loss: 284.0149 - val_mean_absolute_error: 284.0149
+1260/1265 [============================&gt;.] - ETA: 0s - loss: 262.7127 - mean_absolute_error: 262.7127
+Epoch 62: mean_absolute_error improved from 263.14383 to 262.64468, saving model to weights-improvement-62-262.64.hdf5
+1265/1265 [==============================] - 9s 7ms/step - loss: 262.6447 - mean_absolute_error: 262.6447 - val_loss: 275.6958 - val_mean_absolute_error: 275.6958
 Epoch 63/100
-1342/1349 [============================&gt;.] - ETA: 0s - loss: 268.5051 - mean_absolute_error: 268.5051
-Epoch 63: mean_absolute_error did not improve from 267.64966
-1349/1349 [==============================] - 7s 5ms/step - loss: 268.6201 - mean_absolute_error: 268.6201 - val_loss: 277.2839 - val_mean_absolute_error: 277.2839
+1262/1265 [============================&gt;.] - ETA: 0s - loss: 262.2920 - mean_absolute_error: 262.2920
+Epoch 63: mean_absolute_error improved from 262.64468 to 262.31506, saving model to weights-improvement-63-262.32.hdf5
+1265/1265 [==============================] - 9s 7ms/step - loss: 262.3151 - mean_absolute_error: 262.3151 - val_loss: 276.7260 - val_mean_absolute_error: 276.7260
 Epoch 64/100
-1341/1349 [============================&gt;.] - ETA: 0s - loss: 267.3969 - mean_absolute_error: 267.3969
-Epoch 64: mean_absolute_error improved from 267.64966 to 267.53317, saving model to weights-improvement-64-267.53.hdf5
-1349/1349 [==============================] - 6s 5ms/step - loss: 267.5332 - mean_absolute_error: 267.5332 - val_loss: 297.2492 - val_mean_absolute_error: 297.2492
+1263/1265 [============================&gt;.] - ETA: 0s - loss: 262.0448 - mean_absolute_error: 262.0448
+Epoch 64: mean_absolute_error improved from 262.31506 to 261.96585, saving model to weights-improvement-64-261.97.hdf5
+1265/1265 [==============================] - 9s 7ms/step - loss: 261.9659 - mean_absolute_error: 261.9659 - val_loss: 269.0200 - val_mean_absolute_error: 269.0200
 Epoch 65/100
-1343/1349 [============================&gt;.] - ETA: 0s - loss: 267.5489 - mean_absolute_error: 267.5489
-Epoch 65: mean_absolute_error improved from 267.53317 to 267.40350, saving model to weights-improvement-65-267.40.hdf5
-1349/1349 [==============================] - 7s 5ms/step - loss: 267.4035 - mean_absolute_error: 267.4035 - val_loss: 280.1263 - val_mean_absolute_error: 280.1263
+1263/1265 [============================&gt;.] - ETA: 0s - loss: 260.2222 - mean_absolute_error: 260.2222
+Epoch 65: mean_absolute_error improved from 261.96585 to 260.45389, saving model to weights-improvement-65-260.45.hdf5
+1265/1265 [==============================] - 9s 7ms/step - loss: 260.4539 - mean_absolute_error: 260.4539 - val_loss: 285.2539 - val_mean_absolute_error: 285.2539
 Epoch 66/100
-1344/1349 [============================&gt;.] - ETA: 0s - loss: 268.9395 - mean_absolute_error: 268.9395
-Epoch 66: mean_absolute_error did not improve from 267.40350
-1349/1349 [==============================] - 6s 5ms/step - loss: 269.1137 - mean_absolute_error: 269.1137 - val_loss: 276.3358 - val_mean_absolute_error: 276.3358
+1260/1265 [============================&gt;.] - ETA: 0s - loss: 261.5404 - mean_absolute_error: 261.5404
+Epoch 66: mean_absolute_error did not improve from 260.45389
+1265/1265 [==============================] - 9s 7ms/step - loss: 261.4118 - mean_absolute_error: 261.4118 - val_loss: 280.8101 - val_mean_absolute_error: 280.8101
 Epoch 67/100
-1341/1349 [============================&gt;.] - ETA: 0s - loss: 267.1703 - mean_absolute_error: 267.1703
-Epoch 67: mean_absolute_error did not improve from 267.40350
-1349/1349 [==============================] - 6s 5ms/step - loss: 267.4108 - mean_absolute_error: 267.4108 - val_loss: 278.7312 - val_mean_absolute_error: 278.7312
+1263/1265 [============================&gt;.] - ETA: 0s - loss: 261.3254 - mean_absolute_error: 261.3254
+Epoch 67: mean_absolute_error did not improve from 260.45389
+1265/1265 [==============================] - 8s 7ms/step - loss: 261.2329 - mean_absolute_error: 261.2329 - val_loss: 274.9099 - val_mean_absolute_error: 274.9099
 Epoch 68/100
-1348/1349 [============================&gt;.] - ETA: 0s - loss: 267.3882 - mean_absolute_error: 267.3882
-Epoch 68: mean_absolute_error improved from 267.40350 to 267.33862, saving model to weights-improvement-68-267.34.hdf5
-1349/1349 [==============================] - 7s 5ms/step - loss: 267.3386 - mean_absolute_error: 267.3386 - val_loss: 266.4570 - val_mean_absolute_error: 266.4570
+1261/1265 [============================&gt;.] - ETA: 0s - loss: 261.5460 - mean_absolute_error: 261.5460
+Epoch 68: mean_absolute_error did not improve from 260.45389
+1265/1265 [==============================] - 9s 7ms/step - loss: 261.4940 - mean_absolute_error: 261.4940 - val_loss: 273.4731 - val_mean_absolute_error: 273.4731
 Epoch 69/100
-1341/1349 [============================&gt;.] - ETA: 0s - loss: 267.3012 - mean_absolute_error: 267.3012
-Epoch 69: mean_absolute_error improved from 267.33862 to 267.04095, saving model to weights-improvement-69-267.04.hdf5
-1349/1349 [==============================] - 7s 5ms/step - loss: 267.0410 - mean_absolute_error: 267.0410 - val_loss: 287.8900 - val_mean_absolute_error: 287.8900
+1257/1265 [============================&gt;.] - ETA: 0s - loss: 260.4289 - mean_absolute_error: 260.4289
+Epoch 69: mean_absolute_error did not improve from 260.45389
+1265/1265 [==============================] - 9s 7ms/step - loss: 260.5057 - mean_absolute_error: 260.5057 - val_loss: 276.4763 - val_mean_absolute_error: 276.4763
 Epoch 70/100
-1339/1349 [============================&gt;.] - ETA: 0s - loss: 264.2447 - mean_absolute_error: 264.2447
-Epoch 70: mean_absolute_error improved from 267.04095 to 264.25421, saving model to weights-improvement-70-264.25.hdf5
-1349/1349 [==============================] - 7s 5ms/step - loss: 264.2542 - mean_absolute_error: 264.2542 - val_loss: 273.8807 - val_mean_absolute_error: 273.8807
+1264/1265 [============================&gt;.] - ETA: 0s - loss: 260.3387 - mean_absolute_error: 260.3387
+Epoch 70: mean_absolute_error improved from 260.45389 to 260.32065, saving model to weights-improvement-70-260.32.hdf5
+1265/1265 [==============================] - 8s 7ms/step - loss: 260.3206 - mean_absolute_error: 260.3206 - val_loss: 281.8819 - val_mean_absolute_error: 281.8819
 Epoch 71/100
-1342/1349 [============================&gt;.] - ETA: 0s - loss: 264.7000 - mean_absolute_error: 264.7000
-Epoch 71: mean_absolute_error did not improve from 264.25421
-1349/1349 [==============================] - 7s 5ms/step - loss: 264.7346 - mean_absolute_error: 264.7346 - val_loss: 292.0533 - val_mean_absolute_error: 292.0533
+1265/1265 [==============================] - ETA: 0s - loss: 259.4282 - mean_absolute_error: 259.4282
+Epoch 71: mean_absolute_error improved from 260.32065 to 259.42822, saving model to weights-improvement-71-259.43.hdf5
+1265/1265 [==============================] - 8s 7ms/step - loss: 259.4282 - mean_absolute_error: 259.4282 - val_loss: 278.2769 - val_mean_absolute_error: 278.2769
 Epoch 72/100
-1337/1349 [============================&gt;.] - ETA: 0s - loss: 265.2312 - mean_absolute_error: 265.2312
-Epoch 72: mean_absolute_error did not improve from 264.25421
-1349/1349 [==============================] - 7s 5ms/step - loss: 265.4453 - mean_absolute_error: 265.4453 - val_loss: 268.9935 - val_mean_absolute_error: 268.9935
+1259/1265 [============================&gt;.] - ETA: 0s - loss: 259.3491 - mean_absolute_error: 259.3491
+Epoch 72: mean_absolute_error improved from 259.42822 to 259.23834, saving model to weights-improvement-72-259.24.hdf5
+1265/1265 [==============================] - 9s 7ms/step - loss: 259.2383 - mean_absolute_error: 259.2383 - val_loss: 273.4283 - val_mean_absolute_error: 273.4283
 Epoch 73/100
-1340/1349 [============================&gt;.] - ETA: 0s - loss: 265.0723 - mean_absolute_error: 265.0723
-Epoch 73: mean_absolute_error did not improve from 264.25421
-1349/1349 [==============================] - 7s 5ms/step - loss: 264.9672 - mean_absolute_error: 264.9672 - val_loss: 265.3836 - val_mean_absolute_error: 265.3836
+1263/1265 [============================&gt;.] - ETA: 0s - loss: 258.8246 - mean_absolute_error: 258.8246
+Epoch 73: mean_absolute_error improved from 259.23834 to 258.80878, saving model to weights-improvement-73-258.81.hdf5
+1265/1265 [==============================] - 9s 7ms/step - loss: 258.8088 - mean_absolute_error: 258.8088 - val_loss: 274.3251 - val_mean_absolute_error: 274.3251
 Epoch 74/100
-1338/1349 [============================&gt;.] - ETA: 0s - loss: 262.0545 - mean_absolute_error: 262.0545
-Epoch 74: mean_absolute_error improved from 264.25421 to 261.89990, saving model to weights-improvement-74-261.90.hdf5
-1349/1349 [==============================] - 7s 5ms/step - loss: 261.8999 - mean_absolute_error: 261.8999 - val_loss: 270.1042 - val_mean_absolute_error: 270.1042
+1261/1265 [============================&gt;.] - ETA: 0s - loss: 259.4546 - mean_absolute_error: 259.4546
+Epoch 74: mean_absolute_error did not improve from 258.80878
+1265/1265 [==============================] - 9s 7ms/step - loss: 259.5805 - mean_absolute_error: 259.5805 - val_loss: 271.4287 - val_mean_absolute_error: 271.4287
 Epoch 75/100
-1348/1349 [============================&gt;.] - ETA: 0s - loss: 264.3604 - mean_absolute_error: 264.3604
-Epoch 75: mean_absolute_error did not improve from 261.89990
-1349/1349 [==============================] - 7s 5ms/step - loss: 264.3935 - mean_absolute_error: 264.3935 - val_loss: 266.2035 - val_mean_absolute_error: 266.2035
+1263/1265 [============================&gt;.] - ETA: 0s - loss: 258.0928 - mean_absolute_error: 258.0928
+Epoch 75: mean_absolute_error improved from 258.80878 to 258.05399, saving model to weights-improvement-75-258.05.hdf5
+1265/1265 [==============================] - 8s 7ms/step - loss: 258.0540 - mean_absolute_error: 258.0540 - val_loss: 283.4730 - val_mean_absolute_error: 283.4730
 Epoch 76/100
-1338/1349 [============================&gt;.] - ETA: 0s - loss: 263.5600 - mean_absolute_error: 263.5600
-Epoch 76: mean_absolute_error did not improve from 261.89990
-1349/1349 [==============================] - 7s 5ms/step - loss: 263.3591 - mean_absolute_error: 263.3591 - val_loss: 288.9212 - val_mean_absolute_error: 288.9212
+1263/1265 [============================&gt;.] - ETA: 0s - loss: 259.2804 - mean_absolute_error: 259.2804
+Epoch 76: mean_absolute_error did not improve from 258.05399
+1265/1265 [==============================] - 8s 6ms/step - loss: 259.3092 - mean_absolute_error: 259.3092 - val_loss: 265.7090 - val_mean_absolute_error: 265.7090
 Epoch 77/100
-1346/1349 [============================&gt;.] - ETA: 0s - loss: 263.4915 - mean_absolute_error: 263.4915
-Epoch 77: mean_absolute_error did not improve from 261.89990
-1349/1349 [==============================] - 7s 5ms/step - loss: 263.5315 - mean_absolute_error: 263.5315 - val_loss: 281.4903 - val_mean_absolute_error: 281.4903
+1264/1265 [============================&gt;.] - ETA: 0s - loss: 259.7331 - mean_absolute_error: 259.7331
+Epoch 77: mean_absolute_error did not improve from 258.05399
+1265/1265 [==============================] - 9s 7ms/step - loss: 259.7154 - mean_absolute_error: 259.7154 - val_loss: 267.9227 - val_mean_absolute_error: 267.9227
 Epoch 78/100
-1340/1349 [============================&gt;.] - ETA: 0s - loss: 262.6222 - mean_absolute_error: 262.6222
-Epoch 78: mean_absolute_error did not improve from 261.89990
-1349/1349 [==============================] - 7s 5ms/step - loss: 262.5051 - mean_absolute_error: 262.5051 - val_loss: 268.5210 - val_mean_absolute_error: 268.5210
+1259/1265 [============================&gt;.] - ETA: 0s - loss: 257.3497 - mean_absolute_error: 257.3497
+Epoch 78: mean_absolute_error improved from 258.05399 to 257.37762, saving model to weights-improvement-78-257.38.hdf5
+1265/1265 [==============================] - 8s 6ms/step - loss: 257.3776 - mean_absolute_error: 257.3776 - val_loss: 267.0429 - val_mean_absolute_error: 267.0429
 Epoch 79/100
-1344/1349 [============================&gt;.] - ETA: 0s - loss: 262.4527 - mean_absolute_error: 262.4527
-Epoch 79: mean_absolute_error did not improve from 261.89990
-1349/1349 [==============================] - 7s 5ms/step - loss: 262.2449 - mean_absolute_error: 262.2449 - val_loss: 264.7841 - val_mean_absolute_error: 264.7841
+1262/1265 [============================&gt;.] - ETA: 0s - loss: 258.6482 - mean_absolute_error: 258.6482
+Epoch 79: mean_absolute_error did not improve from 257.37762
+1265/1265 [==============================] - 9s 7ms/step - loss: 258.6181 - mean_absolute_error: 258.6181 - val_loss: 302.9632 - val_mean_absolute_error: 302.9632
 Epoch 80/100
-1341/1349 [============================&gt;.] - ETA: 0s - loss: 260.7841 - mean_absolute_error: 260.7841
-Epoch 80: mean_absolute_error improved from 261.89990 to 260.95068, saving model to weights-improvement-80-260.95.hdf5
-1349/1349 [==============================] - 7s 5ms/step - loss: 260.9507 - mean_absolute_error: 260.9507 - val_loss: 266.5221 - val_mean_absolute_error: 266.5221
+1264/1265 [============================&gt;.] - ETA: 0s - loss: 256.6173 - mean_absolute_error: 256.6173
+Epoch 80: mean_absolute_error improved from 257.37762 to 256.69144, saving model to weights-improvement-80-256.69.hdf5
+1265/1265 [==============================] - 8s 7ms/step - loss: 256.6914 - mean_absolute_error: 256.6914 - val_loss: 272.5680 - val_mean_absolute_error: 272.5680
 Epoch 81/100
-1345/1349 [============================&gt;.] - ETA: 0s - loss: 262.7252 - mean_absolute_error: 262.7252
-Epoch 81: mean_absolute_error did not improve from 260.95068
-1349/1349 [==============================] - 7s 5ms/step - loss: 262.9887 - mean_absolute_error: 262.9887 - val_loss: 267.8198 - val_mean_absolute_error: 267.8198
+1260/1265 [============================&gt;.] - ETA: 0s - loss: 256.1020 - mean_absolute_error: 256.1020
+Epoch 81: mean_absolute_error improved from 256.69144 to 256.15176, saving model to weights-improvement-81-256.15.hdf5
+1265/1265 [==============================] - 8s 7ms/step - loss: 256.1518 - mean_absolute_error: 256.1518 - val_loss: 273.9900 - val_mean_absolute_error: 273.9900
 Epoch 82/100
-1345/1349 [============================&gt;.] - ETA: 0s - loss: 261.7719 - mean_absolute_error: 261.7719
-Epoch 82: mean_absolute_error did not improve from 260.95068
-1349/1349 [==============================] - 7s 5ms/step - loss: 261.8309 - mean_absolute_error: 261.8309 - val_loss: 278.5572 - val_mean_absolute_error: 278.5572
+1260/1265 [============================&gt;.] - ETA: 0s - loss: 257.6393 - mean_absolute_error: 257.6393
+Epoch 82: mean_absolute_error did not improve from 256.15176
+1265/1265 [==============================] - 9s 7ms/step - loss: 257.6509 - mean_absolute_error: 257.6509 - val_loss: 278.5881 - val_mean_absolute_error: 278.5881
 Epoch 83/100
-1344/1349 [============================&gt;.] - ETA: 0s - loss: 261.4043 - mean_absolute_error: 261.4043
-Epoch 83: mean_absolute_error did not improve from 260.95068
-1349/1349 [==============================] - 7s 5ms/step - loss: 261.0670 - mean_absolute_error: 261.0670 - val_loss: 268.8640 - val_mean_absolute_error: 268.8640
+1257/1265 [============================&gt;.] - ETA: 0s - loss: 258.6159 - mean_absolute_error: 258.6159
+Epoch 83: mean_absolute_error did not improve from 256.15176
+1265/1265 [==============================] - 8s 6ms/step - loss: 258.3841 - mean_absolute_error: 258.3841 - val_loss: 273.7223 - val_mean_absolute_error: 273.7223
 Epoch 84/100
-1342/1349 [============================&gt;.] - ETA: 0s - loss: 259.3737 - mean_absolute_error: 259.3737
-Epoch 84: mean_absolute_error improved from 260.95068 to 259.35300, saving model to weights-improvement-84-259.35.hdf5
-1349/1349 [==============================] - 7s 5ms/step - loss: 259.3530 - mean_absolute_error: 259.3530 - val_loss: 266.2275 - val_mean_absolute_error: 266.2275
+1262/1265 [============================&gt;.] - ETA: 0s - loss: 256.9400 - mean_absolute_error: 256.9400
+Epoch 84: mean_absolute_error did not improve from 256.15176
+1265/1265 [==============================] - 9s 7ms/step - loss: 256.8088 - mean_absolute_error: 256.8088 - val_loss: 269.0718 - val_mean_absolute_error: 269.0718
 Epoch 85/100
-1346/1349 [============================&gt;.] - ETA: 0s - loss: 260.0239 - mean_absolute_error: 260.0239
-Epoch 85: mean_absolute_error did not improve from 259.35300
-1349/1349 [==============================] - 7s 5ms/step - loss: 260.1193 - mean_absolute_error: 260.1193 - val_loss: 265.9777 - val_mean_absolute_error: 265.9777
+1262/1265 [============================&gt;.] - ETA: 0s - loss: 256.2411 - mean_absolute_error: 256.2411
+Epoch 85: mean_absolute_error did not improve from 256.15176
+1265/1265 [==============================] - 9s 7ms/step - loss: 256.2562 - mean_absolute_error: 256.2562 - val_loss: 271.2829 - val_mean_absolute_error: 271.2829
 Epoch 86/100
-1344/1349 [============================&gt;.] - ETA: 0s - loss: 260.3412 - mean_absolute_error: 260.3412
-Epoch 86: mean_absolute_error did not improve from 259.35300
-1349/1349 [==============================] - 7s 5ms/step - loss: 260.2549 - mean_absolute_error: 260.2549 - val_loss: 301.0803 - val_mean_absolute_error: 301.0803
+1258/1265 [============================&gt;.] - ETA: 0s - loss: 256.4092 - mean_absolute_error: 256.4092
+Epoch 86: mean_absolute_error did not improve from 256.15176
+1265/1265 [==============================] - 8s 6ms/step - loss: 256.3647 - mean_absolute_error: 256.3647 - val_loss: 280.8788 - val_mean_absolute_error: 280.8788
 Epoch 87/100
-1345/1349 [============================&gt;.] - ETA: 0s - loss: 260.5390 - mean_absolute_error: 260.5390
-Epoch 87: mean_absolute_error did not improve from 259.35300
-1349/1349 [==============================] - 7s 5ms/step - loss: 260.4413 - mean_absolute_error: 260.4413 - val_loss: 305.4234 - val_mean_absolute_error: 305.4234
+1258/1265 [============================&gt;.] - ETA: 0s - loss: 257.3482 - mean_absolute_error: 257.3482
+Epoch 87: mean_absolute_error did not improve from 256.15176
+1265/1265 [==============================] - 8s 7ms/step - loss: 257.2455 - mean_absolute_error: 257.2455 - val_loss: 273.4560 - val_mean_absolute_error: 273.4560
 Epoch 88/100
-1340/1349 [============================&gt;.] - ETA: 0s - loss: 259.6588 - mean_absolute_error: 259.6588
-Epoch 88: mean_absolute_error did not improve from 259.35300
-1349/1349 [==============================] - 7s 5ms/step - loss: 259.8802 - mean_absolute_error: 259.8802 - val_loss: 276.7069 - val_mean_absolute_error: 276.7069
+1264/1265 [============================&gt;.] - ETA: 0s - loss: 255.2337 - mean_absolute_error: 255.2337
+Epoch 88: mean_absolute_error improved from 256.15176 to 255.21135, saving model to weights-improvement-88-255.21.hdf5
+1265/1265 [==============================] - 8s 6ms/step - loss: 255.2113 - mean_absolute_error: 255.2113 - val_loss: 266.6252 - val_mean_absolute_error: 266.6252
 Epoch 89/100
-1348/1349 [============================&gt;.] - ETA: 0s - loss: 259.8956 - mean_absolute_error: 259.8956
-Epoch 89: mean_absolute_error did not improve from 259.35300
-1349/1349 [==============================] - 7s 5ms/step - loss: 259.8979 - mean_absolute_error: 259.8979 - val_loss: 273.2306 - val_mean_absolute_error: 273.2306
+1261/1265 [============================&gt;.] - ETA: 0s - loss: 254.7688 - mean_absolute_error: 254.7688
+Epoch 89: mean_absolute_error improved from 255.21135 to 254.62270, saving model to weights-improvement-89-254.62.hdf5
+1265/1265 [==============================] - 8s 6ms/step - loss: 254.6227 - mean_absolute_error: 254.6227 - val_loss: 272.6359 - val_mean_absolute_error: 272.6359
 Epoch 90/100
-1349/1349 [==============================] - ETA: 0s - loss: 260.1613 - mean_absolute_error: 260.1613
-Epoch 90: mean_absolute_error did not improve from 259.35300
-1349/1349 [==============================] - 7s 5ms/step - loss: 260.1613 - mean_absolute_error: 260.1613 - val_loss: 273.8012 - val_mean_absolute_error: 273.8012
+1262/1265 [============================&gt;.] - ETA: 0s - loss: 254.8884 - mean_absolute_error: 254.8884
+Epoch 90: mean_absolute_error did not improve from 254.62270
+1265/1265 [==============================] - 8s 7ms/step - loss: 254.8161 - mean_absolute_error: 254.8161 - val_loss: 272.4840 - val_mean_absolute_error: 272.4840
 Epoch 91/100
-1347/1349 [============================&gt;.] - ETA: 0s - loss: 258.1008 - mean_absolute_error: 258.1008
-Epoch 91: mean_absolute_error improved from 259.35300 to 258.07419, saving model to weights-improvement-91-258.07.hdf5
-1349/1349 [==============================] - 7s 5ms/step - loss: 258.0742 - mean_absolute_error: 258.0742 - val_loss: 270.0970 - val_mean_absolute_error: 270.0970
+1264/1265 [============================&gt;.] - ETA: 0s - loss: 255.8725 - mean_absolute_error: 255.8725
+Epoch 91: mean_absolute_error did not improve from 254.62270
+1265/1265 [==============================] - 8s 6ms/step - loss: 255.8936 - mean_absolute_error: 255.8936 - val_loss: 264.9242 - val_mean_absolute_error: 264.9242
 Epoch 92/100
-1342/1349 [============================&gt;.] - ETA: 0s - loss: 258.1602 - mean_absolute_error: 258.1602
-Epoch 92: mean_absolute_error did not improve from 258.07419
-1349/1349 [==============================] - 6s 5ms/step - loss: 258.2663 - mean_absolute_error: 258.2663 - val_loss: 264.9029 - val_mean_absolute_error: 264.9029
+1264/1265 [============================&gt;.] - ETA: 0s - loss: 253.1958 - mean_absolute_error: 253.1958
+Epoch 92: mean_absolute_error improved from 254.62270 to 253.22588, saving model to weights-improvement-92-253.23.hdf5
+1265/1265 [==============================] - 9s 7ms/step - loss: 253.2259 - mean_absolute_error: 253.2259 - val_loss: 269.3941 - val_mean_absolute_error: 269.3941
 Epoch 93/100
-1342/1349 [============================&gt;.] - ETA: 0s - loss: 257.5172 - mean_absolute_error: 257.5172
-Epoch 93: mean_absolute_error improved from 258.07419 to 257.45050, saving model to weights-improvement-93-257.45.hdf5
-1349/1349 [==============================] - 6s 5ms/step - loss: 257.4505 - mean_absolute_error: 257.4505 - val_loss: 264.6636 - val_mean_absolute_error: 264.6636
+1264/1265 [============================&gt;.] - ETA: 0s - loss: 253.4891 - mean_absolute_error: 253.4891
+Epoch 93: mean_absolute_error did not improve from 253.22588
+1265/1265 [==============================] - 9s 7ms/step - loss: 253.4809 - mean_absolute_error: 253.4809 - val_loss: 270.2321 - val_mean_absolute_error: 270.2321
 Epoch 94/100
-1340/1349 [============================&gt;.] - ETA: 0s - loss: 258.0478 - mean_absolute_error: 258.0478
-Epoch 94: mean_absolute_error did not improve from 257.45050
-1349/1349 [==============================] - 6s 5ms/step - loss: 257.8596 - mean_absolute_error: 257.8596 - val_loss: 268.8142 - val_mean_absolute_error: 268.8142
+1261/1265 [============================&gt;.] - ETA: 0s - loss: 255.7568 - mean_absolute_error: 255.7568
+Epoch 94: mean_absolute_error did not improve from 253.22588
+1265/1265 [==============================] - 8s 7ms/step - loss: 255.9236 - mean_absolute_error: 255.9236 - val_loss: 287.2017 - val_mean_absolute_error: 287.2017
 Epoch 95/100
-1348/1349 [============================&gt;.] - ETA: 0s - loss: 256.1260 - mean_absolute_error: 256.1260
-Epoch 95: mean_absolute_error improved from 257.45050 to 256.11093, saving model to weights-improvement-95-256.11.hdf5
-1349/1349 [==============================] - 7s 5ms/step - loss: 256.1109 - mean_absolute_error: 256.1109 - val_loss: 268.8107 - val_mean_absolute_error: 268.8107
+1264/1265 [============================&gt;.] - ETA: 0s - loss: 254.1152 - mean_absolute_error: 254.1152
+Epoch 95: mean_absolute_error did not improve from 253.22588
+1265/1265 [==============================] - 8s 7ms/step - loss: 254.1022 - mean_absolute_error: 254.1022 - val_loss: 266.4073 - val_mean_absolute_error: 266.4073
 Epoch 96/100
-1339/1349 [============================&gt;.] - ETA: 0s - loss: 256.2558 - mean_absolute_error: 256.2558
-Epoch 96: mean_absolute_error did not improve from 256.11093
-1349/1349 [==============================] - 7s 5ms/step - loss: 256.3578 - mean_absolute_error: 256.3578 - val_loss: 273.2952 - val_mean_absolute_error: 273.2952
+1262/1265 [============================&gt;.] - ETA: 0s - loss: 254.4116 - mean_absolute_error: 254.4116
+Epoch 96: mean_absolute_error did not improve from 253.22588
+1265/1265 [==============================] - 9s 7ms/step - loss: 254.2555 - mean_absolute_error: 254.2555 - val_loss: 266.7433 - val_mean_absolute_error: 266.7433
 Epoch 97/100
-1337/1349 [============================&gt;.] - ETA: 0s - loss: 256.5900 - mean_absolute_error: 256.5900
-Epoch 97: mean_absolute_error did not improve from 256.11093
-1349/1349 [==============================] - 6s 5ms/step - loss: 256.8444 - mean_absolute_error: 256.8444 - val_loss: 296.6774 - val_mean_absolute_error: 296.6774
+1265/1265 [==============================] - ETA: 0s - loss: 254.8111 - mean_absolute_error: 254.8111
+Epoch 97: mean_absolute_error did not improve from 253.22588
+1265/1265 [==============================] - 8s 7ms/step - loss: 254.8111 - mean_absolute_error: 254.8111 - val_loss: 272.4577 - val_mean_absolute_error: 272.4577
 Epoch 98/100
-1345/1349 [============================&gt;.] - ETA: 0s - loss: 255.6658 - mean_absolute_error: 255.6658
-Epoch 98: mean_absolute_error improved from 256.11093 to 255.53282, saving model to weights-improvement-98-255.53.hdf5
-1349/1349 [==============================] - 7s 5ms/step - loss: 255.5328 - mean_absolute_error: 255.5328 - val_loss: 264.5593 - val_mean_absolute_error: 264.5593
+1258/1265 [============================&gt;.] - ETA: 0s - loss: 252.8209 - mean_absolute_error: 252.8209
+Epoch 98: mean_absolute_error improved from 253.22588 to 252.71930, saving model to weights-improvement-98-252.72.hdf5
+1265/1265 [==============================] - 8s 7ms/step - loss: 252.7193 - mean_absolute_error: 252.7193 - val_loss: 270.0870 - val_mean_absolute_error: 270.0870
 Epoch 99/100
-1341/1349 [============================&gt;.] - ETA: 0s - loss: 256.5060 - mean_absolute_error: 256.5060
-Epoch 99: mean_absolute_error did not improve from 255.53282
-1349/1349 [==============================] - 6s 5ms/step - loss: 256.3454 - mean_absolute_error: 256.3454 - val_loss: 263.5509 - val_mean_absolute_error: 263.5509
+1260/1265 [============================&gt;.] - ETA: 0s - loss: 252.6382 - mean_absolute_error: 252.6382
+Epoch 99: mean_absolute_error did not improve from 252.71930
+1265/1265 [==============================] - 8s 7ms/step - loss: 252.7497 - mean_absolute_error: 252.7497 - val_loss: 264.2926 - val_mean_absolute_error: 264.2926
 Epoch 100/100
-1344/1349 [============================&gt;.] - ETA: 0s - loss: 254.6009 - mean_absolute_error: 254.6009
-Epoch 100: mean_absolute_error improved from 255.53282 to 254.63725, saving model to weights-improvement-100-254.64.hdf5
-1349/1349 [==============================] - 6s 5ms/step - loss: 254.6373 - mean_absolute_error: 254.6373 - val_loss: 265.9120 - val_mean_absolute_error: 265.9120
+1264/1265 [============================&gt;.] - ETA: 0s - loss: 253.5483 - mean_absolute_error: 253.5483
+Epoch 100: mean_absolute_error did not improve from 252.71930
+1265/1265 [==============================] - 9s 7ms/step - loss: 253.5357 - mean_absolute_error: 253.5357 - val_loss: 274.3509 - val_mean_absolute_error: 274.3509
 </pre>
 </div>
 </div>
@@ -14678,7 +15108,7 @@ Epoch 100: mean_absolute_error improved from 255.53282 to 254.63725, saving mode
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[105]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-python"><pre><span></span><span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">backend</span><span class="o">.</span><span class="n">clear_session</span><span class="p">()</span>
@@ -14691,7 +15121,7 @@ Epoch 100: mean_absolute_error improved from 255.53282 to 254.63725, saving mode
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[95]:</div>
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-python"><pre><span></span><span class="o">%</span><span class="n">tensorboard</span> <span class="o">--</span><span class="n">logdir</span> <span class="n">logs</span>
@@ -14713,10 +15143,10 @@ Epoch 100: mean_absolute_error improved from 255.53282 to 254.63725, saving mode
 
 
 
-<div id="f063b939-ac25-49e6-99fb-926400211e63"></div>
+<div id="cb1befc7-abd4-4352-9101-d2e425d26050"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#f063b939-ac25-49e6-99fb-926400211e63');
+var element = $('#cb1befc7-abd4-4352-9101-d2e425d26050');
 
         (async () => {
             const url = new URL(await google.colab.kernel.proxyPort(6006, {'cache': true}));
@@ -14747,7 +15177,48 @@ var element = $('#f063b939-ac25-49e6-99fb-926400211e63');
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[129]:</div>
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">predictions</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">squeeze</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test_scaled</span><span class="p">))</span>
+<span class="n">labels</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">squeeze</span><span class="p">(</span><span class="n">y_test</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">predictions</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="s1">&#39;.&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Predictions&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Labels&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Graph of Predictions vs Labels on Test Data&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[48]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-python"><pre><span></span><span class="c1"># Get prediction on test set</span>
@@ -14772,26 +15243,26 @@ var element = $('#f063b939-ac25-49e6-99fb-926400211e63');
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Predicted: 4876      Actual: 4733
-Predicted: 7089      Actual: 6424
-Predicted: 5330      Actual: 5510
-Predicted: 11272     Actual: 8770
-Predicted: 4614      Actual: 4493
-Predicted: 919       Actual: 918
-Predicted: 758       Actual: 789
-Predicted: 3049      Actual: 2823
-Predicted: 15377     Actual: 18705
-Predicted: 491       Actual: 507
-Predicted: 1641      Actual: 1880
-Predicted: 915       Actual: 935
-Predicted: 1848      Actual: 1872
-Predicted: 947       Actual: 956
-Predicted: 3822      Actual: 3111
-Predicted: 14486     Actual: 16499
-Predicted: 937       Actual: 954
-Predicted: 8857      Actual: 8342
-Predicted: 7250      Actual: 8711
-Predicted: 2424      Actual: 2567
+<pre>Predicted: 1394      Actual: 1378
+Predicted: 5154      Actual: 4955
+Predicted: 1980      Actual: 1999
+Predicted: 669       Actual: 642
+Predicted: 4360      Actual: 3569
+Predicted: 635       Actual: 602
+Predicted: 3747      Actual: 3994
+Predicted: 3333      Actual: 3422
+Predicted: 890       Actual: 936
+Predicted: 479       Actual: 523
+Predicted: 4310      Actual: 4258
+Predicted: 4244      Actual: 4469
+Predicted: 1843      Actual: 2092
+Predicted: 688       Actual: 741
+Predicted: 4840      Actual: 4581
+Predicted: 657       Actual: 734
+Predicted: 4053      Actual: 4234
+Predicted: 856       Actual: 863
+Predicted: 481       Actual: 487
+Predicted: 468       Actual: 502
 </pre>
 </div>
 </div>
@@ -14802,7 +15273,7 @@ Predicted: 2424      Actual: 2567
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[110]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-python"><pre><span></span><span class="o">%%</span><span class="n">shell</span>
@@ -14824,14 +15295,14 @@ Predicted: 2424      Actual: 2567
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>[NbConvertApp] Converting notebook /content/diamond_price_prediction.ipynb to html
-[NbConvertApp] Writing 410848 bytes to /content/diamond_price_prediction.html
+[NbConvertApp] Writing 415187 bytes to /content/diamond_price_prediction.html
 </pre>
 </div>
 </div>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[110]:</div>
+    <div class="prompt output_prompt">Out[&nbsp;]:</div>
 
 
 
